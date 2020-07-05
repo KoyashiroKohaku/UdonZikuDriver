@@ -1,0 +1,4059 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
+  m_Name: ZikuDriver
+  m_EditorClassIdentifier: 
+  serializedUdonProgramAsset: {fileID: 11400000, guid: f4ea99f2ba7294b4fbe1e9c572d23167,
+    type: 2}
+  udonAssembly: ".data_start\r\n\r\n    .export _isDebug\r\n    .export _text\r\n\r\n
+    \   __refl_const_intnl_udonTypeID: %SystemInt64, null\r\n    __refl_const_intnl_udonTypeName:
+    %SystemString, null\r\n    _isDebug: %SystemBoolean, null\r\n    _text: %UnityEngineUIText,
+    null\r\n    _animator: %UnityEngineAnimator, null\r\n    _isEquipped: %SystemBoolean,
+    null\r\n    _state: %SystemInt32, null\r\n    _offsetY: %SystemSingle, null\r\n
+    \   _offsetZ: %SystemSingle, null\r\n    _parameterName: %SystemString, null\r\n
+    \   _vrcPickup: %VRCSDK3ComponentsVRCPickup, null\r\n    _rider: %VRCSDKBaseVRCPlayerApi,
+    null\r\n    __0_this_intnl_UnityEngineTransform: %UnityEngineTransform, this\r\n
+    \   __0_this_intnl_ZikuDriver: %VRCUdonUdonBehaviour, this\r\n    __0_firstLineCharCount_Int32:
+    %SystemInt32, null\r\n    __0_value_Int32: %SystemInt32, null\r\n    __0_chestRotation_Quaternion:
+    %UnityEngineQuaternion, null\r\n    __0_zikuDriverRotation_Quaternion: %UnityEngineQuaternion,
+    null\r\n    __1_chestRotation_Quaternion: %UnityEngineQuaternion, null\r\n    __0_value_Single:
+    %SystemSingle, null\r\n    __1_value_Single: %SystemSingle, null\r\n    __0_message_String:
+    %SystemString, null\r\n    __0_type_String: %SystemString, null\r\n    __0_lines_StringArray:
+    %SystemStringArray, null\r\n    __0_chestPosition_Vector3: %UnityEngineVector3,
+    null\r\n    __0_offset_Vector3: %UnityEngineVector3, null\r\n    __0_zikuDriverPosition_Vector3:
+    %UnityEngineVector3, null\r\n    __1_chestPosition_Vector3: %UnityEngineVector3,
+    null\r\n    __0_const_intnl_SystemBoolean: %SystemBoolean, null\r\n    __1_const_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __0_const_intnl_SystemChar: %SystemChar, null\r\n
+    \   __0_const_intnl_SystemCharArray: %SystemCharArray, null\r\n    __0_const_intnl_UnityEngineHumanBodyBones:
+    %UnityEngineHumanBodyBones, null\r\n    __0_const_intnl_SystemInt32: %SystemInt32,
+    null\r\n    __1_const_intnl_SystemInt32: %SystemInt32, null\r\n    __2_const_intnl_SystemInt32:
+    %SystemInt32, null\r\n    __3_const_intnl_SystemInt32: %SystemInt32, null\r\n
+    \   __0_const_intnl_VRCUdonCommonInterfacesNetworkEventTarget: %VRCUdonCommonInterfacesNetworkEventTarget,
+    null\r\n    __0_const_intnl_SystemObject: %SystemObject, null\r\n    __0_const_intnl_SystemString:
+    %SystemString, null\r\n    __1_const_intnl_SystemString: %SystemString, null\r\n
+    \   __10_const_intnl_SystemString: %SystemString, null\r\n    __11_const_intnl_SystemString:
+    %SystemString, null\r\n    __12_const_intnl_SystemString: %SystemString, null\r\n
+    \   __2_const_intnl_SystemString: %SystemString, null\r\n    __3_const_intnl_SystemString:
+    %SystemString, null\r\n    __4_const_intnl_SystemString: %SystemString, null\r\n
+    \   __5_const_intnl_SystemString: %SystemString, null\r\n    __6_const_intnl_SystemString:
+    %SystemString, null\r\n    __7_const_intnl_SystemString: %SystemString, null\r\n
+    \   __8_const_intnl_SystemString: %SystemString, null\r\n    __9_const_intnl_SystemString:
+    %SystemString, null\r\n    __0_const_intnl_SystemType: %SystemType, null\r\n    __1_const_intnl_SystemType:
+    %SystemType, null\r\n    __0_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n
+    \   __0_const_intnl_SystemUInt32: %SystemUInt32, null\r\n    __1_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\r\n    __10_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
+    null\r\n    __11_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __12_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\r\n    __13_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
+    null\r\n    __14_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __15_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\r\n    __16_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
+    null\r\n    __2_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __3_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\r\n    __4_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
+    null\r\n    __5_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __6_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\r\n    __7_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
+    null\r\n    __8_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __9_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\r\n    __0_intnl_SystemBoolean: %SystemBoolean, null\r\n    __1_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __2_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __0_intnl_UnityEngineComponent: %UnityEngineComponent, null\r\n    __0_intnl_SystemInt32:
+    %SystemInt32, null\r\n    __1_intnl_SystemInt32: %SystemInt32, null\r\n    __2_intnl_SystemInt32:
+    %SystemInt32, null\r\n    __0_intnl_UnityEngineQuaternion: %UnityEngineQuaternion,
+    null\r\n    __1_intnl_UnityEngineQuaternion: %UnityEngineQuaternion, null\r\n
+    \   __2_intnl_UnityEngineQuaternion: %UnityEngineQuaternion, null\r\n    __0_intnl_SystemSingle:
+    %SystemSingle, null\r\n    __1_intnl_SystemSingle: %SystemSingle, null\r\n    __2_intnl_SystemSingle:
+    %SystemSingle, null\r\n    __3_intnl_SystemSingle: %SystemSingle, null\r\n    __4_intnl_SystemSingle:
+    %SystemSingle, null\r\n    __0_intnl_SystemString: %SystemString, null\r\n    __1_intnl_SystemString:
+    %SystemString, null\r\n    __10_intnl_SystemString: %SystemString, null\r\n    __11_intnl_SystemString:
+    %SystemString, null\r\n    __12_intnl_SystemString: %SystemString, null\r\n    __13_intnl_SystemString:
+    %SystemString, null\r\n    __14_intnl_SystemString: %SystemString, null\r\n    __15_intnl_SystemString:
+    %SystemString, null\r\n    __16_intnl_SystemString: %SystemString, null\r\n    __2_intnl_SystemString:
+    %SystemString, null\r\n    __3_intnl_SystemString: %SystemString, null\r\n    __4_intnl_SystemString:
+    %SystemString, null\r\n    __5_intnl_SystemString: %SystemString, null\r\n    __6_intnl_SystemString:
+    %SystemString, null\r\n    __7_intnl_SystemString: %SystemString, null\r\n    __8_intnl_SystemString:
+    %SystemString, null\r\n    __9_intnl_SystemString: %SystemString, null\r\n    __0_intnl_SystemStringArray:
+    %SystemStringArray, null\r\n    __0_intnl_returnTarget_UInt32: %SystemUInt32,
+    null\r\n    __0_intnl_UnityEngineVector3: %UnityEngineVector3, null\r\n    __1_intnl_UnityEngineVector3:
+    %UnityEngineVector3, null\r\n    __2_intnl_UnityEngineVector3: %UnityEngineVector3,
+    null\r\n    __3_intnl_UnityEngineVector3: %UnityEngineVector3, null\r\n    __4_intnl_UnityEngineVector3:
+    %UnityEngineVector3, null\r\n    __5_intnl_UnityEngineVector3: %UnityEngineVector3,
+    null\r\n    __0_intnl_VRCSDKBaseVRCPlayerApi: %VRCSDKBaseVRCPlayerApi, null\r\n
+    \   __1_intnl_VRCSDKBaseVRCPlayerApi: %VRCSDKBaseVRCPlayerApi, null\r\n\r\n.data_end\r\n\r\n
+    \       \r\n         # using System;\r\n        \r\n         # using System.Linq;\r\n
+    \       \r\n         # using UdonSharp;\r\n        \r\n         # using UnityEngine;\r\n
+    \       \r\n         # using UnityEngine.Assertions.Must;\r\n        \r\n         #
+    using UnityEngine.UI;\r\n        \r\n         # using VRC.SDKBase;\r\n        \r\n
+    \        # using VRC.Udon.Common.Interfaces;\r\n        \r\n         # public
+    class ZikuDriver : UdonSharpBehaviour\r\n.code_start\r\n        \r\n         #
+    private readonly string _parameterName = \"State\";\r\n        \r\n         #
+    private Animator _animator;\r\n        \r\n         # private VRC_Pickup _vrcPickup;\r\n
+    \       \r\n         # private bool _isEquipped = false;\r\n        \r\n         #
+    private VRCPlayerApi _rider;\r\n        \r\n         # private int _state = 0;\r\n
+    \       \r\n         # private float _offsetY;\r\n        \r\n         # private
+    float _offsetZ;\r\n        \r\n         # [SerializeField]\r\n        \r\n         #
+    private bool _isDebug = false;\r\n        \r\n         # [SerializeField]\r\n
+    \       \r\n         # private Text _text;\r\n        \r\n         # private void
+    Start()\r\n    .export _start\r\n        \r\n    _start:\r\n        \r\n        PUSH,
+    __0_const_intnl_SystemUInt32\r\n        \r\n         # {\r\n        \r\n         #
+    _animator = GetComponent<Animator>();\r\n        PUSH, __0_this_intnl_ZikuDriver\r\n
+    \       PUSH, __0_const_intnl_SystemType\r\n        PUSH, _animator\r\n        EXTERN,
+    \"UnityEngineAnimator.__GetComponent__T\"\r\n        \r\n         # _vrcPickup
+    = (VRC_Pickup)GetComponent(typeof(VRC_Pickup));\r\n        PUSH, __0_this_intnl_ZikuDriver\r\n
+    \       PUSH, __1_const_intnl_SystemType\r\n        PUSH, __0_intnl_UnityEngineComponent\r\n
+    \       EXTERN, \"UnityEngineComponent.__GetComponent__SystemType__UnityEngineComponent\"\r\n
+    \       PUSH, __0_intnl_UnityEngineComponent\r\n        PUSH, _vrcPickup\r\n        COPY\r\n
+    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\r\n        COPY\r\n
+    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        \r\n        \r\n
+    \        # private void Update()\r\n    .export _update\r\n        \r\n    _update:\r\n
+    \       \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         #
+    {\r\n        \r\n         # if (_isEquipped)\r\n        PUSH, _isEquipped\r\n
+    \       JUMP_IF_FALSE, 0x000001B8\r\n        \r\n         # {\r\n        \r\n
+    \        # var chestPosition = _rider.GetBonePosition(HumanBodyBones.Chest);\r\n
+    \       PUSH, _rider\r\n        PUSH, __0_const_intnl_UnityEngineHumanBodyBones\r\n
+    \       PUSH, __0_intnl_UnityEngineVector3\r\n        EXTERN, \"VRCSDKBaseVRCPlayerApi.__GetBonePosition__UnityEngineHumanBodyBones__UnityEngineVector3\"\r\n
+    \       PUSH, __0_intnl_UnityEngineVector3\r\n        PUSH, __0_chestPosition_Vector3\r\n
+    \       COPY\r\n        \r\n         # var chestRotation = _rider.GetBoneRotation(HumanBodyBones.Chest);\r\n
+    \       PUSH, _rider\r\n        PUSH, __0_const_intnl_UnityEngineHumanBodyBones\r\n
+    \       PUSH, __0_intnl_UnityEngineQuaternion\r\n        EXTERN, \"VRCSDKBaseVRCPlayerApi.__GetBoneRotation__UnityEngineHumanBodyBones__UnityEngineQuaternion\"\r\n
+    \       PUSH, __0_intnl_UnityEngineQuaternion\r\n        PUSH, __0_chestRotation_Quaternion\r\n
+    \       COPY\r\n        \r\n         # transform.position = new Vector3(chestPosition.x,
+    chestPosition.y + _offsetY, chestPosition.z + _offsetZ);\r\n        PUSH, __0_chestPosition_Vector3\r\n
+    \       PUSH, __0_intnl_SystemSingle\r\n        EXTERN, \"UnityEngineVector3.__get_x__SystemSingle\"\r\n
+    \       PUSH, __0_chestPosition_Vector3\r\n        PUSH, __1_intnl_SystemSingle\r\n
+    \       EXTERN, \"UnityEngineVector3.__get_y__SystemSingle\"\r\n        PUSH,
+    __1_intnl_SystemSingle\r\n        PUSH, _offsetY\r\n        PUSH, __2_intnl_SystemSingle\r\n
+    \       EXTERN, \"SystemSingle.__op_Addition__SystemSingle_SystemSingle__SystemSingle\"\r\n
+    \       PUSH, __0_chestPosition_Vector3\r\n        PUSH, __3_intnl_SystemSingle\r\n
+    \       EXTERN, \"UnityEngineVector3.__get_z__SystemSingle\"\r\n        PUSH,
+    __3_intnl_SystemSingle\r\n        PUSH, _offsetZ\r\n        PUSH, __4_intnl_SystemSingle\r\n
+    \       EXTERN, \"SystemSingle.__op_Addition__SystemSingle_SystemSingle__SystemSingle\"\r\n
+    \       PUSH, __0_intnl_SystemSingle\r\n        PUSH, __2_intnl_SystemSingle\r\n
+    \       PUSH, __4_intnl_SystemSingle\r\n        PUSH, __1_intnl_UnityEngineVector3\r\n
+    \       EXTERN, \"UnityEngineVector3.__ctor__SystemSingle_SystemSingle_SystemSingle__UnityEngineVector3\"\r\n
+    \       PUSH, __0_this_intnl_UnityEngineTransform\r\n        PUSH, __1_intnl_UnityEngineVector3\r\n
+    \       EXTERN, \"UnityEngineTransform.__set_position__UnityEngineVector3__SystemVoid\"\r\n
+    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\r\n        COPY\r\n
+    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        \r\n        \r\n
+    \        # public override void OnPickup()\r\n    .export _onPickup\r\n        \r\n
+    \   _onPickup:\r\n        \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n
+    \        # {\r\n        \r\n         # WriteLog(\"call\", nameof(OnPickup));\r\n
+    \       PUSH, __0_const_intnl_SystemString\r\n        PUSH, __0_type_String\r\n
+    \       COPY\r\n        PUSH, __1_const_intnl_SystemString\r\n        PUSH, __0_message_String\r\n
+    \       COPY\r\n        PUSH, __0_const_intnl_exitJumpLoc_UInt32\r\n        JUMP,
+    0x000009B8\r\n        \r\n         # Reset();\r\n        PUSH, __1_const_intnl_exitJumpLoc_UInt32\r\n
+    \       JUMP, 0x00000354\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
+    epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
+    \       \r\n        \r\n         # public override void OnPickupUseDown()\r\n
+    \   .export _onPickupUseDown\r\n        \r\n    _onPickupUseDown:\r\n        \r\n
+    \       PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         # {\r\n        \r\n
+    \        # WriteLog(\"call\", nameof(OnPickupUseDown));\r\n        PUSH, __0_const_intnl_SystemString\r\n
+    \       PUSH, __0_type_String\r\n        COPY\r\n        PUSH, __2_const_intnl_SystemString\r\n
+    \       PUSH, __0_message_String\r\n        COPY\r\n        PUSH, __2_const_intnl_exitJumpLoc_UInt32\r\n
+    \       JUMP, 0x000009B8\r\n        \r\n         # switch (_state)\r\n        \r\n
+    \        # case 0:\r\n        PUSH, _state\r\n        PUSH, __0_const_intnl_SystemInt32\r\n
+    \       PUSH, __0_intnl_SystemBoolean\r\n        EXTERN, \"SystemInt32.__op_Equality__SystemInt32_SystemInt32__SystemBoolean\"\r\n
+    \       PUSH, __0_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x000002A8\r\n
+    \       JUMP, 0x000002E8\r\n        \r\n         # case 1:\r\n        PUSH, _state\r\n
+    \       PUSH, __1_const_intnl_SystemInt32\r\n        PUSH, __1_intnl_SystemBoolean\r\n
+    \       EXTERN, \"SystemInt32.__op_Equality__SystemInt32_SystemInt32__SystemBoolean\"\r\n
+    \       PUSH, __1_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x000002E0\r\n
+    \       JUMP, 0x00000310\r\n        JUMP, 0x00000338\r\n        PUSH, __0_this_intnl_ZikuDriver\r\n
+    \       PUSH, __0_const_intnl_VRCUdonCommonInterfacesNetworkEventTarget\r\n        PUSH,
+    __3_const_intnl_SystemString\r\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomNetworkEvent__VRCUdonCommonInterfacesNetworkEventTarget_SystemString__SystemVoid\"\r\n
+    \       JUMP, 0x00000338\r\n        \r\n         # SendCustomNetworkEvent(NetworkEventTarget.All,
+    nameof(PutOnZikuDriver));\r\n        PUSH, __0_this_intnl_ZikuDriver\r\n        PUSH,
+    __0_const_intnl_VRCUdonCommonInterfacesNetworkEventTarget\r\n        PUSH, __4_const_intnl_SystemString\r\n
+    \       EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomNetworkEvent__VRCUdonCommonInterfacesNetworkEventTarget_SystemString__SystemVoid\"\r\n
+    \       \r\n         # break;\r\n        JUMP, 0x00000338\r\n        PUSH, __0_intnl_returnTarget_UInt32
+    #Function epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
+    \       \r\n        \r\n         # public void Reset()\r\n    .export Reset\r\n
+    \       \r\n    Reset:\r\n        \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n
+    \       \r\n         # {\r\n        \r\n         # WriteLog(\"call\", nameof(Reset));\r\n
+    \       PUSH, __0_const_intnl_SystemString\r\n        PUSH, __0_type_String\r\n
+    \       COPY\r\n        PUSH, __5_const_intnl_SystemString\r\n        PUSH, __0_message_String\r\n
+    \       COPY\r\n        PUSH, __3_const_intnl_exitJumpLoc_UInt32\r\n        JUMP,
+    0x000009B8\r\n        \r\n         # _isEquipped = false;\r\n        PUSH, __0_const_intnl_SystemBoolean\r\n
+    \       PUSH, _isEquipped\r\n        COPY\r\n        \r\n         # _rider = null;\r\n
+    \       PUSH, __0_const_intnl_SystemObject\r\n        PUSH, _rider\r\n        COPY\r\n
+    \       \r\n         # SetState(0);\r\n        PUSH, __0_const_intnl_SystemInt32\r\n
+    \       PUSH, __0_value_Int32\r\n        COPY\r\n        PUSH, __4_const_intnl_exitJumpLoc_UInt32\r\n
+    \       JUMP, 0x0000076C\r\n        \r\n         # SetOffsetY(0);\r\n        PUSH,
+    __0_const_intnl_SystemInt32\r\n        PUSH, __0_value_Single\r\n        EXTERN,
+    \"SystemConvert.__ToSingle__SystemInt32__SystemSingle\"\r\n        PUSH, __5_const_intnl_exitJumpLoc_UInt32\r\n
+    \       JUMP, 0x00000830\r\n        \r\n         # SetOffsetZ(0);\r\n        PUSH,
+    __0_const_intnl_SystemInt32\r\n        PUSH, __1_value_Single\r\n        EXTERN,
+    \"SystemConvert.__ToSingle__SystemInt32__SystemSingle\"\r\n        PUSH, __6_const_intnl_exitJumpLoc_UInt32\r\n
+    \       JUMP, 0x000008F4\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
+    epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
+    \       \r\n        \r\n         # public void LunchZikuDriver()\r\n    .export
+    LunchZikuDriver\r\n        \r\n    LunchZikuDriver:\r\n        \r\n        PUSH,
+    __0_const_intnl_SystemUInt32\r\n        \r\n         # {\r\n        \r\n         #
+    WriteLog(\"call\", nameof(LunchZikuDriver));\r\n        PUSH, __0_const_intnl_SystemString\r\n
+    \       PUSH, __0_type_String\r\n        COPY\r\n        PUSH, __3_const_intnl_SystemString\r\n
+    \       PUSH, __0_message_String\r\n        COPY\r\n        PUSH, __7_const_intnl_exitJumpLoc_UInt32\r\n
+    \       JUMP, 0x000009B8\r\n        \r\n         # WriteLog(\"audio\", \"\uFF3C\uFF7C\uFF9E\uFF78\uFF73\uFF84\uFF9E\uFF97\uFF72\uFF8A\uFF9E\uFF70\uFF0F\");\r\n
+    \       PUSH, __6_const_intnl_SystemString\r\n        PUSH, __0_type_String\r\n
+    \       COPY\r\n        PUSH, __7_const_intnl_SystemString\r\n        PUSH, __0_message_String\r\n
+    \       COPY\r\n        PUSH, __8_const_intnl_exitJumpLoc_UInt32\r\n        JUMP,
+    0x000009B8\r\n        \r\n         # SetState(1);\r\n        PUSH, __1_const_intnl_SystemInt32\r\n
+    \       PUSH, __0_value_Int32\r\n        COPY\r\n        PUSH, __9_const_intnl_exitJumpLoc_UInt32\r\n
+    \       JUMP, 0x0000076C\r\n        \r\n         # _animator.Play(nameof(LunchZikuDriver));\r\n
+    \       PUSH, _animator\r\n        PUSH, __3_const_intnl_SystemString\r\n        EXTERN,
+    \"UnityEngineAnimator.__Play__SystemString__SystemVoid\"\r\n        PUSH, __0_intnl_returnTarget_UInt32
+    #Function epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
+    \       \r\n        \r\n         # public void PutOnZikuDriver()\r\n    .export
+    PutOnZikuDriver\r\n        \r\n    PutOnZikuDriver:\r\n        \r\n        PUSH,
+    __0_const_intnl_SystemUInt32\r\n        \r\n         # {\r\n        \r\n         #
+    WriteLog(\"call\", nameof(PutOnZikuDriver));\r\n        PUSH, __0_const_intnl_SystemString\r\n
+    \       PUSH, __0_type_String\r\n        COPY\r\n        PUSH, __4_const_intnl_SystemString\r\n
+    \       PUSH, __0_message_String\r\n        COPY\r\n        PUSH, __10_const_intnl_exitJumpLoc_UInt32\r\n
+    \       JUMP, 0x000009B8\r\n        \r\n         # SetState(2);\r\n        PUSH,
+    __2_const_intnl_SystemInt32\r\n        PUSH, __0_value_Int32\r\n        COPY\r\n
+    \       PUSH, __11_const_intnl_exitJumpLoc_UInt32\r\n        JUMP, 0x0000076C\r\n
+    \       \r\n         # _isEquipped = true;\r\n        PUSH, __1_const_intnl_SystemBoolean\r\n
+    \       PUSH, _isEquipped\r\n        COPY\r\n        \r\n         # _rider = _vrcPickup.currentPlayer;\r\n
+    \       PUSH, _vrcPickup\r\n        PUSH, _rider\r\n        EXTERN, \"VRCSDK3ComponentsVRCPickup.__get_currentPlayer__VRCSDKBaseVRCPlayerApi\"\r\n
+    \       \r\n         # var chestPosition = _vrcPickup.currentPlayer.GetBonePosition(HumanBodyBones.Chest);\r\n
+    \       PUSH, _vrcPickup\r\n        PUSH, __0_intnl_VRCSDKBaseVRCPlayerApi\r\n
+    \       EXTERN, \"VRCSDK3ComponentsVRCPickup.__get_currentPlayer__VRCSDKBaseVRCPlayerApi\"\r\n
+    \       PUSH, __0_intnl_VRCSDKBaseVRCPlayerApi\r\n        PUSH, __0_const_intnl_UnityEngineHumanBodyBones\r\n
+    \       PUSH, __2_intnl_UnityEngineVector3\r\n        EXTERN, \"VRCSDKBaseVRCPlayerApi.__GetBonePosition__UnityEngineHumanBodyBones__UnityEngineVector3\"\r\n
+    \       PUSH, __2_intnl_UnityEngineVector3\r\n        PUSH, __1_chestPosition_Vector3\r\n
+    \       COPY\r\n        \r\n         # var chestRotation = _vrcPickup.currentPlayer.GetBoneRotation(HumanBodyBones.Chest);\r\n
+    \       PUSH, _vrcPickup\r\n        PUSH, __1_intnl_VRCSDKBaseVRCPlayerApi\r\n
+    \       EXTERN, \"VRCSDK3ComponentsVRCPickup.__get_currentPlayer__VRCSDKBaseVRCPlayerApi\"\r\n
+    \       PUSH, __1_intnl_VRCSDKBaseVRCPlayerApi\r\n        PUSH, __0_const_intnl_UnityEngineHumanBodyBones\r\n
+    \       PUSH, __1_intnl_UnityEngineQuaternion\r\n        EXTERN, \"VRCSDKBaseVRCPlayerApi.__GetBoneRotation__UnityEngineHumanBodyBones__UnityEngineQuaternion\"\r\n
+    \       PUSH, __1_intnl_UnityEngineQuaternion\r\n        PUSH, __1_chestRotation_Quaternion\r\n
+    \       COPY\r\n        \r\n         # var zikuDriverPosition = transform.position;\r\n
+    \       PUSH, __0_this_intnl_UnityEngineTransform\r\n        PUSH, __3_intnl_UnityEngineVector3\r\n
+    \       EXTERN, \"UnityEngineTransform.__get_position__UnityEngineVector3\"\r\n
+    \       PUSH, __3_intnl_UnityEngineVector3\r\n        PUSH, __0_zikuDriverPosition_Vector3\r\n
+    \       COPY\r\n        \r\n         # var zikuDriverRotation = transform.rotation;\r\n
+    \       PUSH, __0_this_intnl_UnityEngineTransform\r\n        PUSH, __2_intnl_UnityEngineQuaternion\r\n
+    \       EXTERN, \"UnityEngineTransform.__get_rotation__UnityEngineQuaternion\"\r\n
+    \       PUSH, __2_intnl_UnityEngineQuaternion\r\n        PUSH, __0_zikuDriverRotation_Quaternion\r\n
+    \       COPY\r\n        \r\n         # var offset = chestRotation * (chestPosition
+    - zikuDriverPosition);\r\n        PUSH, __1_chestPosition_Vector3\r\n        PUSH,
+    __0_zikuDriverPosition_Vector3\r\n        PUSH, __4_intnl_UnityEngineVector3\r\n
+    \       EXTERN, \"UnityEngineVector3.__op_Subtraction__UnityEngineVector3_UnityEngineVector3__UnityEngineVector3\"\r\n
+    \       PUSH, __1_chestRotation_Quaternion\r\n        PUSH, __4_intnl_UnityEngineVector3\r\n
+    \       PUSH, __5_intnl_UnityEngineVector3\r\n        EXTERN, \"UnityEngineQuaternion.__op_Multiply__UnityEngineQuaternion_UnityEngineVector3__UnityEngineVector3\"\r\n
+    \       PUSH, __5_intnl_UnityEngineVector3\r\n        PUSH, __0_offset_Vector3\r\n
+    \       COPY\r\n        \r\n         # SetOffsetY(offset.y);\r\n        PUSH,
+    __0_offset_Vector3\r\n        PUSH, __0_value_Single\r\n        EXTERN, \"UnityEngineVector3.__get_y__SystemSingle\"\r\n
+    \       PUSH, __12_const_intnl_exitJumpLoc_UInt32\r\n        JUMP, 0x00000830\r\n
+    \       \r\n         # SetOffsetZ(offset.z);\r\n        PUSH, __0_offset_Vector3\r\n
+    \       PUSH, __1_value_Single\r\n        EXTERN, \"UnityEngineVector3.__get_z__SystemSingle\"\r\n
+    \       PUSH, __13_const_intnl_exitJumpLoc_UInt32\r\n        JUMP, 0x000008F4\r\n
+    \       \r\n         # _animator.Play(nameof(PutOnZikuDriver));\r\n        PUSH,
+    _animator\r\n        PUSH, __4_const_intnl_SystemString\r\n        EXTERN, \"UnityEngineAnimator.__Play__SystemString__SystemVoid\"\r\n
+    \       \r\n         # _vrcPickup.Drop();\r\n        PUSH, _vrcPickup\r\n        EXTERN,
+    \"VRCSDK3ComponentsVRCPickup.__Drop__SystemVoid\"\r\n        PUSH, __0_intnl_returnTarget_UInt32
+    #Function epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
+    \       \r\n        \r\n         # private void SetState(int value)\r\n    SetState:\r\n
+    \       \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         #
+    {\r\n        \r\n         # WriteLog(nameof(_state), _state + \"=>\" + value);\r\n
+    \       PUSH, _state\r\n        PUSH, __0_intnl_SystemString\r\n        EXTERN,
+    \"SystemInt32.__ToString__SystemString\"\r\n        PUSH, __0_intnl_SystemString\r\n
+    \       PUSH, __9_const_intnl_SystemString\r\n        PUSH, __1_intnl_SystemString\r\n
+    \       EXTERN, \"SystemString.__op_Addition__SystemString_SystemString__SystemString\"\r\n
+    \       PUSH, __0_value_Int32\r\n        PUSH, __2_intnl_SystemString\r\n        EXTERN,
+    \"SystemInt32.__ToString__SystemString\"\r\n        PUSH, __1_intnl_SystemString\r\n
+    \       PUSH, __2_intnl_SystemString\r\n        PUSH, __0_message_String\r\n        EXTERN,
+    \"SystemString.__op_Addition__SystemString_SystemString__SystemString\"\r\n        PUSH,
+    __8_const_intnl_SystemString\r\n        PUSH, __0_type_String\r\n        COPY\r\n
+    \       PUSH, __14_const_intnl_exitJumpLoc_UInt32\r\n        JUMP, 0x000009B8\r\n
+    \       \r\n         # _state = value;\r\n        PUSH, __0_value_Int32\r\n        PUSH,
+    _state\r\n        COPY\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
+    epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
+    \       \r\n        \r\n         # private void SetOffsetY(float value)\r\n    SetOffsetY:\r\n
+    \       \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         #
+    {\r\n        \r\n         # WriteLog(nameof(_offsetZ), _offsetY + \"=>\" + value);\r\n
+    \       PUSH, _offsetY\r\n        PUSH, __3_intnl_SystemString\r\n        EXTERN,
+    \"SystemSingle.__ToString__SystemString\"\r\n        PUSH, __3_intnl_SystemString\r\n
+    \       PUSH, __9_const_intnl_SystemString\r\n        PUSH, __4_intnl_SystemString\r\n
+    \       EXTERN, \"SystemString.__op_Addition__SystemString_SystemString__SystemString\"\r\n
+    \       PUSH, __0_value_Single\r\n        PUSH, __5_intnl_SystemString\r\n        EXTERN,
+    \"SystemSingle.__ToString__SystemString\"\r\n        PUSH, __4_intnl_SystemString\r\n
+    \       PUSH, __5_intnl_SystemString\r\n        PUSH, __0_message_String\r\n        EXTERN,
+    \"SystemString.__op_Addition__SystemString_SystemString__SystemString\"\r\n        PUSH,
+    __10_const_intnl_SystemString\r\n        PUSH, __0_type_String\r\n        COPY\r\n
+    \       PUSH, __15_const_intnl_exitJumpLoc_UInt32\r\n        JUMP, 0x000009B8\r\n
+    \       \r\n         # _offsetY = value;\r\n        PUSH, __0_value_Single\r\n
+    \       PUSH, _offsetY\r\n        COPY\r\n        PUSH, __0_intnl_returnTarget_UInt32
+    #Function epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
+    \       \r\n        \r\n         # private void SetOffsetZ(float value)\r\n    SetOffsetZ:\r\n
+    \       \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         #
+    {\r\n        \r\n         # WriteLog(nameof(_offsetZ), _offsetZ + \"=>\" + value);\r\n
+    \       PUSH, _offsetZ\r\n        PUSH, __6_intnl_SystemString\r\n        EXTERN,
+    \"SystemSingle.__ToString__SystemString\"\r\n        PUSH, __6_intnl_SystemString\r\n
+    \       PUSH, __9_const_intnl_SystemString\r\n        PUSH, __7_intnl_SystemString\r\n
+    \       EXTERN, \"SystemString.__op_Addition__SystemString_SystemString__SystemString\"\r\n
+    \       PUSH, __1_value_Single\r\n        PUSH, __8_intnl_SystemString\r\n        EXTERN,
+    \"SystemSingle.__ToString__SystemString\"\r\n        PUSH, __7_intnl_SystemString\r\n
+    \       PUSH, __8_intnl_SystemString\r\n        PUSH, __0_message_String\r\n        EXTERN,
+    \"SystemString.__op_Addition__SystemString_SystemString__SystemString\"\r\n        PUSH,
+    __10_const_intnl_SystemString\r\n        PUSH, __0_type_String\r\n        COPY\r\n
+    \       PUSH, __16_const_intnl_exitJumpLoc_UInt32\r\n        JUMP, 0x000009B8\r\n
+    \       \r\n         # _offsetZ = value;\r\n        PUSH, __1_value_Single\r\n
+    \       PUSH, _offsetZ\r\n        COPY\r\n        PUSH, __0_intnl_returnTarget_UInt32
+    #Function epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
+    \       \r\n        \r\n         # private void WriteLog(string type, string message)\r\n
+    \   WriteLog:\r\n        \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n
+    \        # {\r\n        \r\n         # if (_isDebug)\r\n        PUSH, _isDebug\r\n
+    \       JUMP_IF_FALSE, 0x00000C88\r\n        \r\n         # {\r\n        \r\n
+    \        # var lines = _text.text.Split('\\n');\r\n        PUSH, _text\r\n        PUSH,
+    __9_intnl_SystemString\r\n        EXTERN, \"UnityEngineUIText.__get_text__SystemString\"\r\n
+    \       PUSH, __0_const_intnl_SystemCharArray\r\n        PUSH, __0_const_intnl_SystemInt32\r\n
+    \       PUSH, __0_const_intnl_SystemChar\r\n        EXTERN, \"SystemCharArray.__Set__SystemInt32_SystemChar__SystemVoid\"\r\n
+    \       PUSH, __9_intnl_SystemString\r\n        PUSH, __0_const_intnl_SystemCharArray\r\n
+    \       PUSH, __0_intnl_SystemStringArray\r\n        EXTERN, \"SystemString.__Split__SystemCharArray__SystemStringArray\"\r\n
+    \       PUSH, __0_intnl_SystemStringArray\r\n        PUSH, __0_lines_StringArray\r\n
+    \       COPY\r\n        \r\n         # if (lines.Length > 17)\r\n        PUSH,
+    __0_lines_StringArray\r\n        PUSH, __0_intnl_SystemInt32\r\n        EXTERN,
+    \"SystemStringArray.__get_Length__SystemInt32\"\r\n        PUSH, __0_intnl_SystemInt32\r\n
+    \       PUSH, __3_const_intnl_SystemInt32\r\n        PUSH, __2_intnl_SystemBoolean\r\n
+    \       EXTERN, \"SystemInt32.__op_GreaterThan__SystemInt32_SystemInt32__SystemBoolean\"\r\n
+    \       PUSH, __2_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x00000BC0\r\n
+    \       \r\n         # {\r\n        \r\n         # var firstLineCharCount = lines[0].Length
+    + 1;\r\n        PUSH, __0_lines_StringArray\r\n        PUSH, __0_const_intnl_SystemInt32\r\n
+    \       PUSH, __10_intnl_SystemString\r\n        EXTERN, \"SystemStringArray.__Get__SystemInt32__SystemString\"\r\n
+    \       PUSH, __10_intnl_SystemString\r\n        PUSH, __1_intnl_SystemInt32\r\n
+    \       EXTERN, \"SystemString.__get_Length__SystemInt32\"\r\n        PUSH, __1_intnl_SystemInt32\r\n
+    \       PUSH, __1_const_intnl_SystemInt32\r\n        PUSH, __2_intnl_SystemInt32\r\n
+    \       EXTERN, \"SystemInt32.__op_Addition__SystemInt32_SystemInt32__SystemInt32\"\r\n
+    \       PUSH, __2_intnl_SystemInt32\r\n        PUSH, __0_firstLineCharCount_Int32\r\n
+    \       COPY\r\n        \r\n         # _text.text = _text.text.Substring(firstLineCharCount)
+    + type + \": \" + message + \"\\n\";\r\n        PUSH, _text\r\n        PUSH, __11_intnl_SystemString\r\n
+    \       EXTERN, \"UnityEngineUIText.__get_text__SystemString\"\r\n        PUSH,
+    __11_intnl_SystemString\r\n        PUSH, __0_firstLineCharCount_Int32\r\n        PUSH,
+    __12_intnl_SystemString\r\n        EXTERN, \"SystemString.__Substring__SystemInt32__SystemString\"\r\n
+    \       PUSH, __12_intnl_SystemString\r\n        PUSH, __0_type_String\r\n        PUSH,
+    __13_intnl_SystemString\r\n        EXTERN, \"SystemString.__op_Addition__SystemString_SystemString__SystemString\"\r\n
+    \       PUSH, __13_intnl_SystemString\r\n        PUSH, __11_const_intnl_SystemString\r\n
+    \       PUSH, __14_intnl_SystemString\r\n        EXTERN, \"SystemString.__op_Addition__SystemString_SystemString__SystemString\"\r\n
+    \       PUSH, __14_intnl_SystemString\r\n        PUSH, __0_message_String\r\n
+    \       PUSH, __15_intnl_SystemString\r\n        EXTERN, \"SystemString.__op_Addition__SystemString_SystemString__SystemString\"\r\n
+    \       PUSH, __15_intnl_SystemString\r\n        PUSH, __12_const_intnl_SystemString\r\n
+    \       PUSH, __16_intnl_SystemString\r\n        EXTERN, \"SystemString.__op_Addition__SystemString_SystemString__SystemString\"\r\n
+    \       PUSH, _text\r\n        PUSH, __16_intnl_SystemString\r\n        EXTERN,
+    \"UnityEngineUIText.__set_text__SystemString__SystemVoid\"\r\n        JUMP, 0x00000C88\r\n
+    \       \r\n         # else\r\n        \r\n         # {\r\n        \r\n         #
+    _text.text += type + \": \" + message + \"\\n\";\r\n        PUSH, __0_type_String\r\n
+    \       PUSH, __11_const_intnl_SystemString\r\n        PUSH, __10_intnl_SystemString\r\n
+    \       EXTERN, \"SystemString.__op_Addition__SystemString_SystemString__SystemString\"\r\n
+    \       PUSH, __10_intnl_SystemString\r\n        PUSH, __0_message_String\r\n
+    \       PUSH, __11_intnl_SystemString\r\n        EXTERN, \"SystemString.__op_Addition__SystemString_SystemString__SystemString\"\r\n
+    \       PUSH, __11_intnl_SystemString\r\n        PUSH, __12_const_intnl_SystemString\r\n
+    \       PUSH, __12_intnl_SystemString\r\n        EXTERN, \"SystemString.__op_Addition__SystemString_SystemString__SystemString\"\r\n
+    \       PUSH, __12_intnl_SystemString\r\n        PUSH, __13_intnl_SystemString\r\n
+    \       EXTERN, \"SystemString.__ToString__SystemString\"\r\n        PUSH, _text\r\n
+    \       PUSH, __14_intnl_SystemString\r\n        EXTERN, \"UnityEngineUIText.__get_text__SystemString\"\r\n
+    \       PUSH, __14_intnl_SystemString\r\n        PUSH, __13_intnl_SystemString\r\n
+    \       PUSH, __15_intnl_SystemString\r\n        EXTERN, \"SystemString.__op_Addition__SystemString_SystemString__SystemString\"\r\n
+    \       PUSH, _text\r\n        PUSH, __15_intnl_SystemString\r\n        EXTERN,
+    \"UnityEngineUIText.__set_text__SystemString__SystemVoid\"\r\n        PUSH, __0_intnl_returnTarget_UInt32
+    #Function epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
+    \       \r\n.code_end\r\n"
+  assemblyError: 
+  sourceCsScript: {fileID: 11500000, guid: 7b716a303a98fba48bdfefd3d6434a3f, type: 3}
+  behaviourIDHeapVarName: __refl_const_intnl_udonTypeID
+  compileErrors: []
+  debugInfo:
+    serializedDebugSpans:
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 0
+      endSourceChar: 0
+      line: 0
+      lineChar: 0
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 0
+      endSourceChar: 0
+      line: 0
+      lineChar: 0
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 0
+      endSourceChar: 6
+      line: 0
+      lineChar: 0
+      spanCodeSection: 'using '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 6
+      endSourceChar: 15
+      line: 0
+      lineChar: 6
+      spanCodeSection: "System;\r\n"
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 15
+      endSourceChar: 21
+      line: 1
+      lineChar: 0
+      spanCodeSection: 'using '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 21
+      endSourceChar: 21
+      line: 1
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 21
+      endSourceChar: 28
+      line: 1
+      lineChar: 6
+      spanCodeSection: System.
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 28
+      endSourceChar: 35
+      line: 1
+      lineChar: 13
+      spanCodeSection: "Linq;\r\n"
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 35
+      endSourceChar: 41
+      line: 2
+      lineChar: 0
+      spanCodeSection: 'using '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 41
+      endSourceChar: 53
+      line: 2
+      lineChar: 6
+      spanCodeSection: "UdonSharp;\r\n"
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 53
+      endSourceChar: 59
+      line: 3
+      lineChar: 0
+      spanCodeSection: 'using '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 59
+      endSourceChar: 73
+      line: 3
+      lineChar: 6
+      spanCodeSection: "UnityEngine;\r\n"
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 73
+      endSourceChar: 79
+      line: 4
+      lineChar: 0
+      spanCodeSection: 'using '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 79
+      endSourceChar: 79
+      line: 4
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 79
+      endSourceChar: 79
+      line: 4
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 79
+      endSourceChar: 91
+      line: 4
+      lineChar: 6
+      spanCodeSection: UnityEngine.
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 91
+      endSourceChar: 102
+      line: 4
+      lineChar: 18
+      spanCodeSection: Assertions.
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 102
+      endSourceChar: 109
+      line: 4
+      lineChar: 29
+      spanCodeSection: "Must;\r\n"
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 109
+      endSourceChar: 115
+      line: 5
+      lineChar: 0
+      spanCodeSection: 'using '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 115
+      endSourceChar: 115
+      line: 5
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 115
+      endSourceChar: 127
+      line: 5
+      lineChar: 6
+      spanCodeSection: UnityEngine.
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 127
+      endSourceChar: 132
+      line: 5
+      lineChar: 18
+      spanCodeSection: "UI;\r\n"
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 132
+      endSourceChar: 138
+      line: 6
+      lineChar: 0
+      spanCodeSection: 'using '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 138
+      endSourceChar: 138
+      line: 6
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 138
+      endSourceChar: 142
+      line: 6
+      lineChar: 6
+      spanCodeSection: VRC.
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 142
+      endSourceChar: 152
+      line: 6
+      lineChar: 10
+      spanCodeSection: "SDKBase;\r\n"
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 152
+      endSourceChar: 158
+      line: 7
+      lineChar: 0
+      spanCodeSection: 'using '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 158
+      endSourceChar: 158
+      line: 7
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 158
+      endSourceChar: 158
+      line: 7
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 158
+      endSourceChar: 158
+      line: 7
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 158
+      endSourceChar: 162
+      line: 7
+      lineChar: 6
+      spanCodeSection: VRC.
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 162
+      endSourceChar: 167
+      line: 7
+      lineChar: 10
+      spanCodeSection: Udon.
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 167
+      endSourceChar: 174
+      line: 7
+      lineChar: 15
+      spanCodeSection: Common.
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 174
+      endSourceChar: 189
+      line: 7
+      lineChar: 22
+      spanCodeSection: "Interfaces;\r\n\r\n"
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 189
+      endSourceChar: 213
+      line: 9
+      lineChar: 0
+      spanCodeSection: 'public class ZikuDriver '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 213
+      endSourceChar: 215
+      line: 9
+      lineChar: 24
+      spanCodeSection: ': '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 215
+      endSourceChar: 215
+      line: 9
+      lineChar: 26
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 215
+      endSourceChar: 242
+      line: 9
+      lineChar: 26
+      spanCodeSection: "UdonSharpBehaviour\r\n{\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 242
+      endSourceChar: 259
+      line: 11
+      lineChar: 4
+      spanCodeSection: 'private readonly '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 259
+      endSourceChar: 259
+      line: 11
+      lineChar: 21
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 259
+      endSourceChar: 297
+      line: 11
+      lineChar: 21
+      spanCodeSection: "string _parameterName = \"State\";\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 297
+      endSourceChar: 305
+      line: 12
+      lineChar: 4
+      spanCodeSection: 'private '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 305
+      endSourceChar: 305
+      line: 12
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 305
+      endSourceChar: 330
+      line: 12
+      lineChar: 12
+      spanCodeSection: "Animator _animator;\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 330
+      endSourceChar: 338
+      line: 13
+      lineChar: 4
+      spanCodeSection: 'private '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 338
+      endSourceChar: 338
+      line: 13
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 338
+      endSourceChar: 366
+      line: 13
+      lineChar: 12
+      spanCodeSection: "VRC_Pickup _vrcPickup;\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 366
+      endSourceChar: 374
+      line: 14
+      lineChar: 4
+      spanCodeSection: 'private '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 374
+      endSourceChar: 374
+      line: 14
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 374
+      endSourceChar: 405
+      line: 14
+      lineChar: 12
+      spanCodeSection: "bool _isEquipped = false;\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 405
+      endSourceChar: 413
+      line: 15
+      lineChar: 4
+      spanCodeSection: 'private '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 413
+      endSourceChar: 413
+      line: 15
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 413
+      endSourceChar: 439
+      line: 15
+      lineChar: 12
+      spanCodeSection: "VRCPlayerApi _rider;\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 439
+      endSourceChar: 447
+      line: 16
+      lineChar: 4
+      spanCodeSection: 'private '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 447
+      endSourceChar: 447
+      line: 16
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 447
+      endSourceChar: 468
+      line: 16
+      lineChar: 12
+      spanCodeSection: "int _state = 0;\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 468
+      endSourceChar: 476
+      line: 17
+      lineChar: 4
+      spanCodeSection: 'private '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 476
+      endSourceChar: 476
+      line: 17
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 476
+      endSourceChar: 497
+      line: 17
+      lineChar: 12
+      spanCodeSection: "float _offsetY;\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 497
+      endSourceChar: 505
+      line: 18
+      lineChar: 4
+      spanCodeSection: 'private '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 505
+      endSourceChar: 505
+      line: 18
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 505
+      endSourceChar: 528
+      line: 18
+      lineChar: 12
+      spanCodeSection: "float _offsetZ;\r\n\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 528
+      endSourceChar: 529
+      line: 20
+      lineChar: 4
+      spanCodeSection: '['
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 529
+      endSourceChar: 529
+      line: 20
+      lineChar: 5
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 529
+      endSourceChar: 558
+      line: 20
+      lineChar: 5
+      spanCodeSection: "SerializeField]\r\n    private "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 558
+      endSourceChar: 558
+      line: 21
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 558
+      endSourceChar: 588
+      line: 21
+      lineChar: 12
+      spanCodeSection: "bool _isDebug = false;\r\n\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 588
+      endSourceChar: 589
+      line: 23
+      lineChar: 4
+      spanCodeSection: '['
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 589
+      endSourceChar: 589
+      line: 23
+      lineChar: 5
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 589
+      endSourceChar: 618
+      line: 23
+      lineChar: 5
+      spanCodeSection: "SerializeField]\r\n    private "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 618
+      endSourceChar: 618
+      line: 24
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 618
+      endSourceChar: 657
+      line: 24
+      lineChar: 12
+      spanCodeSection: "Text _text;\r\n\r\n    #region Events\r\n    "
+    - startInstruction: 0
+      endInstruction: 7
+      startSourceChar: 657
+      endSourceChar: 683
+      line: 27
+      lineChar: 4
+      spanCodeSection: "private void Start()\r\n    "
+    - startInstruction: 8
+      endInstruction: 7
+      startSourceChar: 683
+      endSourceChar: 694
+      line: 28
+      lineChar: 4
+      spanCodeSection: "{\r\n        "
+    - startInstruction: 8
+      endInstruction: 7
+      startSourceChar: 694
+      endSourceChar: 694
+      line: 29
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 8
+      endInstruction: 7
+      startSourceChar: 694
+      endSourceChar: 694
+      line: 29
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 8
+      endInstruction: 7
+      startSourceChar: 694
+      endSourceChar: 706
+      line: 29
+      lineChar: 8
+      spanCodeSection: '_animator = '
+    - startInstruction: 8
+      endInstruction: 7
+      startSourceChar: 706
+      endSourceChar: 706
+      line: 29
+      lineChar: 20
+      spanCodeSection: 
+    - startInstruction: 8
+      endInstruction: 7
+      startSourceChar: 706
+      endSourceChar: 718
+      line: 29
+      lineChar: 20
+      spanCodeSection: GetComponent
+    - startInstruction: 8
+      endInstruction: 7
+      startSourceChar: 718
+      endSourceChar: 719
+      line: 29
+      lineChar: 32
+      spanCodeSection: <
+    - startInstruction: 8
+      endInstruction: 39
+      startSourceChar: 719
+      endSourceChar: 741
+      line: 29
+      lineChar: 33
+      spanCodeSection: "Animator>();\r\n        "
+    - startInstruction: 40
+      endInstruction: 39
+      startSourceChar: 741
+      endSourceChar: 741
+      line: 30
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 40
+      endInstruction: 39
+      startSourceChar: 741
+      endSourceChar: 741
+      line: 30
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 40
+      endInstruction: 39
+      startSourceChar: 741
+      endSourceChar: 754
+      line: 30
+      lineChar: 8
+      spanCodeSection: '_vrcPickup = '
+    - startInstruction: 40
+      endInstruction: 39
+      startSourceChar: 754
+      endSourceChar: 766
+      line: 30
+      lineChar: 21
+      spanCodeSection: (VRC_Pickup)
+    - startInstruction: 40
+      endInstruction: 39
+      startSourceChar: 766
+      endSourceChar: 766
+      line: 30
+      lineChar: 33
+      spanCodeSection: 
+    - startInstruction: 40
+      endInstruction: 39
+      startSourceChar: 766
+      endSourceChar: 779
+      line: 30
+      lineChar: 33
+      spanCodeSection: GetComponent(
+    - startInstruction: 40
+      endInstruction: 39
+      startSourceChar: 779
+      endSourceChar: 786
+      line: 30
+      lineChar: 46
+      spanCodeSection: typeof(
+    - startInstruction: 40
+      endInstruction: 111
+      startSourceChar: 786
+      endSourceChar: 814
+      line: 30
+      lineChar: 53
+      spanCodeSection: "VRC_Pickup));\r\n    }\r\n\r\n    "
+    - startInstruction: 112
+      endInstruction: 119
+      startSourceChar: 814
+      endSourceChar: 841
+      line: 33
+      lineChar: 4
+      spanCodeSection: "private void Update()\r\n    "
+    - startInstruction: 120
+      endInstruction: 119
+      startSourceChar: 841
+      endSourceChar: 852
+      line: 34
+      lineChar: 4
+      spanCodeSection: "{\r\n        "
+    - startInstruction: 120
+      endInstruction: 119
+      startSourceChar: 852
+      endSourceChar: 856
+      line: 35
+      lineChar: 8
+      spanCodeSection: if (
+    - startInstruction: 120
+      endInstruction: 135
+      startSourceChar: 856
+      endSourceChar: 878
+      line: 35
+      lineChar: 12
+      spanCodeSection: "_isEquipped)\r\n        "
+    - startInstruction: 136
+      endInstruction: 135
+      startSourceChar: 878
+      endSourceChar: 893
+      line: 36
+      lineChar: 8
+      spanCodeSection: "{\r\n            "
+    - startInstruction: 136
+      endInstruction: 135
+      startSourceChar: 893
+      endSourceChar: 893
+      line: 37
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 136
+      endInstruction: 135
+      startSourceChar: 893
+      endSourceChar: 893
+      line: 37
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 136
+      endInstruction: 135
+      startSourceChar: 893
+      endSourceChar: 911
+      line: 37
+      lineChar: 12
+      spanCodeSection: 'var chestPosition '
+    - startInstruction: 136
+      endInstruction: 135
+      startSourceChar: 911
+      endSourceChar: 913
+      line: 37
+      lineChar: 30
+      spanCodeSection: '= '
+    - startInstruction: 136
+      endInstruction: 135
+      startSourceChar: 913
+      endSourceChar: 913
+      line: 37
+      lineChar: 32
+      spanCodeSection: 
+    - startInstruction: 136
+      endInstruction: 135
+      startSourceChar: 913
+      endSourceChar: 913
+      line: 37
+      lineChar: 32
+      spanCodeSection: 
+    - startInstruction: 136
+      endInstruction: 135
+      startSourceChar: 913
+      endSourceChar: 920
+      line: 37
+      lineChar: 32
+      spanCodeSection: _rider.
+    - startInstruction: 136
+      endInstruction: 135
+      startSourceChar: 920
+      endSourceChar: 936
+      line: 37
+      lineChar: 39
+      spanCodeSection: GetBonePosition(
+    - startInstruction: 136
+      endInstruction: 135
+      startSourceChar: 936
+      endSourceChar: 936
+      line: 37
+      lineChar: 55
+      spanCodeSection: 
+    - startInstruction: 136
+      endInstruction: 135
+      startSourceChar: 936
+      endSourceChar: 951
+      line: 37
+      lineChar: 55
+      spanCodeSection: HumanBodyBones.
+    - startInstruction: 136
+      endInstruction: 187
+      startSourceChar: 951
+      endSourceChar: 972
+      line: 37
+      lineChar: 70
+      spanCodeSection: "Chest);\r\n            "
+    - startInstruction: 188
+      endInstruction: 187
+      startSourceChar: 972
+      endSourceChar: 972
+      line: 38
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 188
+      endInstruction: 187
+      startSourceChar: 972
+      endSourceChar: 972
+      line: 38
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 188
+      endInstruction: 187
+      startSourceChar: 972
+      endSourceChar: 990
+      line: 38
+      lineChar: 12
+      spanCodeSection: 'var chestRotation '
+    - startInstruction: 188
+      endInstruction: 187
+      startSourceChar: 990
+      endSourceChar: 992
+      line: 38
+      lineChar: 30
+      spanCodeSection: '= '
+    - startInstruction: 188
+      endInstruction: 187
+      startSourceChar: 992
+      endSourceChar: 992
+      line: 38
+      lineChar: 32
+      spanCodeSection: 
+    - startInstruction: 188
+      endInstruction: 187
+      startSourceChar: 992
+      endSourceChar: 992
+      line: 38
+      lineChar: 32
+      spanCodeSection: 
+    - startInstruction: 188
+      endInstruction: 187
+      startSourceChar: 992
+      endSourceChar: 999
+      line: 38
+      lineChar: 32
+      spanCodeSection: _rider.
+    - startInstruction: 188
+      endInstruction: 187
+      startSourceChar: 999
+      endSourceChar: 1015
+      line: 38
+      lineChar: 39
+      spanCodeSection: GetBoneRotation(
+    - startInstruction: 188
+      endInstruction: 187
+      startSourceChar: 1015
+      endSourceChar: 1015
+      line: 38
+      lineChar: 55
+      spanCodeSection: 
+    - startInstruction: 188
+      endInstruction: 187
+      startSourceChar: 1015
+      endSourceChar: 1030
+      line: 38
+      lineChar: 55
+      spanCodeSection: HumanBodyBones.
+    - startInstruction: 188
+      endInstruction: 239
+      startSourceChar: 1030
+      endSourceChar: 1053
+      line: 38
+      lineChar: 70
+      spanCodeSection: "Chest);\r\n\r\n            "
+    - startInstruction: 240
+      endInstruction: 239
+      startSourceChar: 1053
+      endSourceChar: 1053
+      line: 40
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 240
+      endInstruction: 239
+      startSourceChar: 1053
+      endSourceChar: 1053
+      line: 40
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 240
+      endInstruction: 239
+      startSourceChar: 1053
+      endSourceChar: 1053
+      line: 40
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 240
+      endInstruction: 239
+      startSourceChar: 1053
+      endSourceChar: 1063
+      line: 40
+      lineChar: 12
+      spanCodeSection: transform.
+    - startInstruction: 240
+      endInstruction: 239
+      startSourceChar: 1063
+      endSourceChar: 1074
+      line: 40
+      lineChar: 22
+      spanCodeSection: 'position = '
+    - startInstruction: 240
+      endInstruction: 239
+      startSourceChar: 1074
+      endSourceChar: 1078
+      line: 40
+      lineChar: 33
+      spanCodeSection: 'new '
+    - startInstruction: 240
+      endInstruction: 239
+      startSourceChar: 1078
+      endSourceChar: 1086
+      line: 40
+      lineChar: 37
+      spanCodeSection: Vector3(
+    - startInstruction: 240
+      endInstruction: 239
+      startSourceChar: 1086
+      endSourceChar: 1086
+      line: 40
+      lineChar: 45
+      spanCodeSection: 
+    - startInstruction: 240
+      endInstruction: 239
+      startSourceChar: 1086
+      endSourceChar: 1086
+      line: 40
+      lineChar: 45
+      spanCodeSection: 
+    - startInstruction: 240
+      endInstruction: 239
+      startSourceChar: 1086
+      endSourceChar: 1100
+      line: 40
+      lineChar: 45
+      spanCodeSection: chestPosition.
+    - startInstruction: 240
+      endInstruction: 263
+      startSourceChar: 1100
+      endSourceChar: 1103
+      line: 40
+      lineChar: 59
+      spanCodeSection: 'x, '
+    - startInstruction: 264
+      endInstruction: 263
+      startSourceChar: 1103
+      endSourceChar: 1103
+      line: 40
+      lineChar: 62
+      spanCodeSection: 
+    - startInstruction: 264
+      endInstruction: 263
+      startSourceChar: 1103
+      endSourceChar: 1103
+      line: 40
+      lineChar: 62
+      spanCodeSection: 
+    - startInstruction: 264
+      endInstruction: 263
+      startSourceChar: 1103
+      endSourceChar: 1103
+      line: 40
+      lineChar: 62
+      spanCodeSection: 
+    - startInstruction: 264
+      endInstruction: 263
+      startSourceChar: 1103
+      endSourceChar: 1117
+      line: 40
+      lineChar: 62
+      spanCodeSection: chestPosition.
+    - startInstruction: 264
+      endInstruction: 287
+      startSourceChar: 1117
+      endSourceChar: 1121
+      line: 40
+      lineChar: 76
+      spanCodeSection: 'y + '
+    - startInstruction: 288
+      endInstruction: 319
+      startSourceChar: 1121
+      endSourceChar: 1131
+      line: 40
+      lineChar: 80
+      spanCodeSection: '_offsetY, '
+    - startInstruction: 320
+      endInstruction: 319
+      startSourceChar: 1131
+      endSourceChar: 1131
+      line: 40
+      lineChar: 90
+      spanCodeSection: 
+    - startInstruction: 320
+      endInstruction: 319
+      startSourceChar: 1131
+      endSourceChar: 1131
+      line: 40
+      lineChar: 90
+      spanCodeSection: 
+    - startInstruction: 320
+      endInstruction: 319
+      startSourceChar: 1131
+      endSourceChar: 1131
+      line: 40
+      lineChar: 90
+      spanCodeSection: 
+    - startInstruction: 320
+      endInstruction: 319
+      startSourceChar: 1131
+      endSourceChar: 1145
+      line: 40
+      lineChar: 90
+      spanCodeSection: chestPosition.
+    - startInstruction: 320
+      endInstruction: 343
+      startSourceChar: 1145
+      endSourceChar: 1149
+      line: 40
+      lineChar: 104
+      spanCodeSection: 'z + '
+    - startInstruction: 344
+      endInstruction: 459
+      startSourceChar: 1149
+      endSourceChar: 1185
+      line: 40
+      lineChar: 108
+      spanCodeSection: "_offsetZ);\r\n        }\r\n    }\r\n\r\n    "
+    - startInstruction: 460
+      endInstruction: 467
+      startSourceChar: 1185
+      endSourceChar: 1222
+      line: 44
+      lineChar: 4
+      spanCodeSection: "public override void OnPickup()\r\n    "
+    - startInstruction: 468
+      endInstruction: 467
+      startSourceChar: 1222
+      endSourceChar: 1233
+      line: 45
+      lineChar: 4
+      spanCodeSection: "{\r\n        "
+    - startInstruction: 468
+      endInstruction: 467
+      startSourceChar: 1233
+      endSourceChar: 1233
+      line: 46
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 468
+      endInstruction: 467
+      startSourceChar: 1233
+      endSourceChar: 1233
+      line: 46
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 468
+      endInstruction: 467
+      startSourceChar: 1233
+      endSourceChar: 1242
+      line: 46
+      lineChar: 8
+      spanCodeSection: WriteLog(
+    - startInstruction: 468
+      endInstruction: 467
+      startSourceChar: 1242
+      endSourceChar: 1250
+      line: 46
+      lineChar: 17
+      spanCodeSection: '"call", '
+    - startInstruction: 468
+      endInstruction: 523
+      startSourceChar: 1250
+      endSourceChar: 1278
+      line: 46
+      lineChar: 25
+      spanCodeSection: "nameof(OnPickup));\r\n        "
+    - startInstruction: 524
+      endInstruction: 523
+      startSourceChar: 1278
+      endSourceChar: 1278
+      line: 47
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 524
+      endInstruction: 523
+      startSourceChar: 1278
+      endSourceChar: 1278
+      line: 47
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 524
+      endInstruction: 559
+      startSourceChar: 1278
+      endSourceChar: 1301
+      line: 47
+      lineChar: 8
+      spanCodeSection: "Reset();\r\n    }\r\n\r\n    "
+    - startInstruction: 560
+      endInstruction: 567
+      startSourceChar: 1301
+      endSourceChar: 1345
+      line: 50
+      lineChar: 4
+      spanCodeSection: "public override void OnPickupUseDown()\r\n    "
+    - startInstruction: 568
+      endInstruction: 567
+      startSourceChar: 1345
+      endSourceChar: 1356
+      line: 51
+      lineChar: 4
+      spanCodeSection: "{\r\n        "
+    - startInstruction: 568
+      endInstruction: 567
+      startSourceChar: 1356
+      endSourceChar: 1356
+      line: 52
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 568
+      endInstruction: 567
+      startSourceChar: 1356
+      endSourceChar: 1356
+      line: 52
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 568
+      endInstruction: 567
+      startSourceChar: 1356
+      endSourceChar: 1365
+      line: 52
+      lineChar: 8
+      spanCodeSection: WriteLog(
+    - startInstruction: 568
+      endInstruction: 567
+      startSourceChar: 1365
+      endSourceChar: 1373
+      line: 52
+      lineChar: 17
+      spanCodeSection: '"call", '
+    - startInstruction: 568
+      endInstruction: 623
+      startSourceChar: 1373
+      endSourceChar: 1410
+      line: 52
+      lineChar: 25
+      spanCodeSection: "nameof(OnPickupUseDown));\r\n\r\n        "
+    - startInstruction: 624
+      endInstruction: 623
+      startSourceChar: 1410
+      endSourceChar: 1418
+      line: 54
+      lineChar: 8
+      spanCodeSection: switch (
+    - startInstruction: 624
+      endInstruction: 623
+      startSourceChar: 1418
+      endSourceChar: 1450
+      line: 54
+      lineChar: 16
+      spanCodeSection: "_state)\r\n        {\r\n            "
+    - startInstruction: 624
+      endInstruction: 623
+      startSourceChar: 1450
+      endSourceChar: 1455
+      line: 56
+      lineChar: 12
+      spanCodeSection: 'case '
+    - startInstruction: 624
+      endInstruction: 679
+      startSourceChar: 1455
+      endSourceChar: 1585
+      line: 56
+      lineChar: 17
+      spanCodeSection: "0:\r\n                SendCustomNetworkEvent(NetworkEventTarget.All,
+        nameof(LunchZikuDriver));\r\n                break;\r\n            "
+    - startInstruction: 680
+      endInstruction: 679
+      startSourceChar: 1585
+      endSourceChar: 1590
+      line: 59
+      lineChar: 12
+      spanCodeSection: 'case '
+    - startInstruction: 680
+      endInstruction: 783
+      startSourceChar: 1590
+      endSourceChar: 1610
+      line: 59
+      lineChar: 17
+      spanCodeSection: "1:\r\n                "
+    - startInstruction: 784
+      endInstruction: 783
+      startSourceChar: 1610
+      endSourceChar: 1610
+      line: 60
+      lineChar: 16
+      spanCodeSection: 
+    - startInstruction: 784
+      endInstruction: 783
+      startSourceChar: 1610
+      endSourceChar: 1610
+      line: 60
+      lineChar: 16
+      spanCodeSection: 
+    - startInstruction: 784
+      endInstruction: 783
+      startSourceChar: 1610
+      endSourceChar: 1633
+      line: 60
+      lineChar: 16
+      spanCodeSection: SendCustomNetworkEvent(
+    - startInstruction: 784
+      endInstruction: 783
+      startSourceChar: 1633
+      endSourceChar: 1633
+      line: 60
+      lineChar: 39
+      spanCodeSection: 
+    - startInstruction: 784
+      endInstruction: 783
+      startSourceChar: 1633
+      endSourceChar: 1652
+      line: 60
+      lineChar: 39
+      spanCodeSection: NetworkEventTarget.
+    - startInstruction: 784
+      endInstruction: 783
+      startSourceChar: 1652
+      endSourceChar: 1657
+      line: 60
+      lineChar: 58
+      spanCodeSection: 'All, '
+    - startInstruction: 784
+      endInstruction: 815
+      startSourceChar: 1657
+      endSourceChar: 1700
+      line: 60
+      lineChar: 63
+      spanCodeSection: "nameof(PutOnZikuDriver));\r\n                "
+    - startInstruction: 816
+      endInstruction: 843
+      startSourceChar: 1700
+      endSourceChar: 1776
+      line: 61
+      lineChar: 16
+      spanCodeSection: "break;\r\n        }\r\n    }\r\n    #endregion\r\n\r\n    #region
+        Network Events\r\n    "
+    - startInstruction: 844
+      endInstruction: 851
+      startSourceChar: 1776
+      endSourceChar: 1801
+      line: 67
+      lineChar: 4
+      spanCodeSection: "public void Reset()\r\n    "
+    - startInstruction: 852
+      endInstruction: 851
+      startSourceChar: 1801
+      endSourceChar: 1812
+      line: 68
+      lineChar: 4
+      spanCodeSection: "{\r\n        "
+    - startInstruction: 852
+      endInstruction: 851
+      startSourceChar: 1812
+      endSourceChar: 1812
+      line: 69
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 852
+      endInstruction: 851
+      startSourceChar: 1812
+      endSourceChar: 1812
+      line: 69
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 852
+      endInstruction: 851
+      startSourceChar: 1812
+      endSourceChar: 1821
+      line: 69
+      lineChar: 8
+      spanCodeSection: WriteLog(
+    - startInstruction: 852
+      endInstruction: 851
+      startSourceChar: 1821
+      endSourceChar: 1829
+      line: 69
+      lineChar: 17
+      spanCodeSection: '"call", '
+    - startInstruction: 852
+      endInstruction: 907
+      startSourceChar: 1829
+      endSourceChar: 1856
+      line: 69
+      lineChar: 25
+      spanCodeSection: "nameof(Reset));\r\n\r\n        "
+    - startInstruction: 908
+      endInstruction: 907
+      startSourceChar: 1856
+      endSourceChar: 1856
+      line: 71
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 908
+      endInstruction: 907
+      startSourceChar: 1856
+      endSourceChar: 1856
+      line: 71
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 908
+      endInstruction: 907
+      startSourceChar: 1856
+      endSourceChar: 1870
+      line: 71
+      lineChar: 8
+      spanCodeSection: '_isEquipped = '
+    - startInstruction: 908
+      endInstruction: 927
+      startSourceChar: 1870
+      endSourceChar: 1886
+      line: 71
+      lineChar: 22
+      spanCodeSection: "false;\r\n        "
+    - startInstruction: 928
+      endInstruction: 927
+      startSourceChar: 1886
+      endSourceChar: 1886
+      line: 72
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 928
+      endInstruction: 927
+      startSourceChar: 1886
+      endSourceChar: 1886
+      line: 72
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 928
+      endInstruction: 927
+      startSourceChar: 1886
+      endSourceChar: 1895
+      line: 72
+      lineChar: 8
+      spanCodeSection: '_rider = '
+    - startInstruction: 928
+      endInstruction: 947
+      startSourceChar: 1895
+      endSourceChar: 1910
+      line: 72
+      lineChar: 17
+      spanCodeSection: "null;\r\n        "
+    - startInstruction: 948
+      endInstruction: 947
+      startSourceChar: 1910
+      endSourceChar: 1910
+      line: 73
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 948
+      endInstruction: 947
+      startSourceChar: 1910
+      endSourceChar: 1910
+      line: 73
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 948
+      endInstruction: 947
+      startSourceChar: 1910
+      endSourceChar: 1919
+      line: 73
+      lineChar: 8
+      spanCodeSection: SetState(
+    - startInstruction: 948
+      endInstruction: 983
+      startSourceChar: 1919
+      endSourceChar: 1932
+      line: 73
+      lineChar: 17
+      spanCodeSection: "0);\r\n        "
+    - startInstruction: 984
+      endInstruction: 983
+      startSourceChar: 1932
+      endSourceChar: 1932
+      line: 74
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 984
+      endInstruction: 983
+      startSourceChar: 1932
+      endSourceChar: 1932
+      line: 74
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 984
+      endInstruction: 983
+      startSourceChar: 1932
+      endSourceChar: 1943
+      line: 74
+      lineChar: 8
+      spanCodeSection: SetOffsetY(
+    - startInstruction: 984
+      endInstruction: 1023
+      startSourceChar: 1943
+      endSourceChar: 1956
+      line: 74
+      lineChar: 19
+      spanCodeSection: "0);\r\n        "
+    - startInstruction: 1024
+      endInstruction: 1023
+      startSourceChar: 1956
+      endSourceChar: 1956
+      line: 75
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1024
+      endInstruction: 1023
+      startSourceChar: 1956
+      endSourceChar: 1956
+      line: 75
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1024
+      endInstruction: 1023
+      startSourceChar: 1956
+      endSourceChar: 1967
+      line: 75
+      lineChar: 8
+      spanCodeSection: SetOffsetZ(
+    - startInstruction: 1024
+      endInstruction: 1083
+      startSourceChar: 1967
+      endSourceChar: 1985
+      line: 75
+      lineChar: 19
+      spanCodeSection: "0);\r\n    }\r\n\r\n    "
+    - startInstruction: 1084
+      endInstruction: 1091
+      startSourceChar: 1985
+      endSourceChar: 2020
+      line: 78
+      lineChar: 4
+      spanCodeSection: "public void LunchZikuDriver()\r\n    "
+    - startInstruction: 1092
+      endInstruction: 1091
+      startSourceChar: 2020
+      endSourceChar: 2031
+      line: 79
+      lineChar: 4
+      spanCodeSection: "{\r\n        "
+    - startInstruction: 1092
+      endInstruction: 1091
+      startSourceChar: 2031
+      endSourceChar: 2031
+      line: 80
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1092
+      endInstruction: 1091
+      startSourceChar: 2031
+      endSourceChar: 2031
+      line: 80
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1092
+      endInstruction: 1091
+      startSourceChar: 2031
+      endSourceChar: 2040
+      line: 80
+      lineChar: 8
+      spanCodeSection: WriteLog(
+    - startInstruction: 1092
+      endInstruction: 1091
+      startSourceChar: 2040
+      endSourceChar: 2048
+      line: 80
+      lineChar: 17
+      spanCodeSection: '"call", '
+    - startInstruction: 1092
+      endInstruction: 1147
+      startSourceChar: 2048
+      endSourceChar: 2085
+      line: 80
+      lineChar: 25
+      spanCodeSection: "nameof(LunchZikuDriver));\r\n\r\n        "
+    - startInstruction: 1148
+      endInstruction: 1147
+      startSourceChar: 2085
+      endSourceChar: 2085
+      line: 82
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1148
+      endInstruction: 1147
+      startSourceChar: 2085
+      endSourceChar: 2085
+      line: 82
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1148
+      endInstruction: 1147
+      startSourceChar: 2085
+      endSourceChar: 2094
+      line: 82
+      lineChar: 8
+      spanCodeSection: WriteLog(
+    - startInstruction: 1148
+      endInstruction: 1147
+      startSourceChar: 2094
+      endSourceChar: 2103
+      line: 82
+      lineChar: 17
+      spanCodeSection: '"audio", '
+    - startInstruction: 1148
+      endInstruction: 1203
+      startSourceChar: 2103
+      endSourceChar: 2132
+      line: 82
+      lineChar: 26
+      spanCodeSection: "\"\uFF3C\uFF7C\uFF9E\uFF78\uFF73\uFF84\uFF9E\uFF97\uFF72\uFF8A\uFF9E\uFF70\uFF0F\");\r\n\r\n
+        \       "
+    - startInstruction: 1204
+      endInstruction: 1203
+      startSourceChar: 2132
+      endSourceChar: 2132
+      line: 84
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1204
+      endInstruction: 1203
+      startSourceChar: 2132
+      endSourceChar: 2132
+      line: 84
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1204
+      endInstruction: 1203
+      startSourceChar: 2132
+      endSourceChar: 2141
+      line: 84
+      lineChar: 8
+      spanCodeSection: SetState(
+    - startInstruction: 1204
+      endInstruction: 1239
+      startSourceChar: 2141
+      endSourceChar: 2154
+      line: 84
+      lineChar: 17
+      spanCodeSection: "1);\r\n        "
+    - startInstruction: 1240
+      endInstruction: 1239
+      startSourceChar: 2154
+      endSourceChar: 2154
+      line: 85
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1240
+      endInstruction: 1239
+      startSourceChar: 2154
+      endSourceChar: 2154
+      line: 85
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1240
+      endInstruction: 1239
+      startSourceChar: 2154
+      endSourceChar: 2154
+      line: 85
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1240
+      endInstruction: 1239
+      startSourceChar: 2154
+      endSourceChar: 2164
+      line: 85
+      lineChar: 8
+      spanCodeSection: _animator.
+    - startInstruction: 1240
+      endInstruction: 1239
+      startSourceChar: 2164
+      endSourceChar: 2169
+      line: 85
+      lineChar: 18
+      spanCodeSection: Play(
+    - startInstruction: 1240
+      endInstruction: 1283
+      startSourceChar: 2169
+      endSourceChar: 2209
+      line: 85
+      lineChar: 23
+      spanCodeSection: "nameof(LunchZikuDriver));\r\n    }\r\n\r\n    "
+    - startInstruction: 1284
+      endInstruction: 1291
+      startSourceChar: 2209
+      endSourceChar: 2244
+      line: 88
+      lineChar: 4
+      spanCodeSection: "public void PutOnZikuDriver()\r\n    "
+    - startInstruction: 1292
+      endInstruction: 1291
+      startSourceChar: 2244
+      endSourceChar: 2255
+      line: 89
+      lineChar: 4
+      spanCodeSection: "{\r\n        "
+    - startInstruction: 1292
+      endInstruction: 1291
+      startSourceChar: 2255
+      endSourceChar: 2255
+      line: 90
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1292
+      endInstruction: 1291
+      startSourceChar: 2255
+      endSourceChar: 2255
+      line: 90
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1292
+      endInstruction: 1291
+      startSourceChar: 2255
+      endSourceChar: 2264
+      line: 90
+      lineChar: 8
+      spanCodeSection: WriteLog(
+    - startInstruction: 1292
+      endInstruction: 1291
+      startSourceChar: 2264
+      endSourceChar: 2272
+      line: 90
+      lineChar: 17
+      spanCodeSection: '"call", '
+    - startInstruction: 1292
+      endInstruction: 1347
+      startSourceChar: 2272
+      endSourceChar: 2309
+      line: 90
+      lineChar: 25
+      spanCodeSection: "nameof(PutOnZikuDriver));\r\n\r\n        "
+    - startInstruction: 1348
+      endInstruction: 1347
+      startSourceChar: 2309
+      endSourceChar: 2309
+      line: 92
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1348
+      endInstruction: 1347
+      startSourceChar: 2309
+      endSourceChar: 2309
+      line: 92
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1348
+      endInstruction: 1347
+      startSourceChar: 2309
+      endSourceChar: 2318
+      line: 92
+      lineChar: 8
+      spanCodeSection: SetState(
+    - startInstruction: 1348
+      endInstruction: 1383
+      startSourceChar: 2318
+      endSourceChar: 2331
+      line: 92
+      lineChar: 17
+      spanCodeSection: "2);\r\n        "
+    - startInstruction: 1384
+      endInstruction: 1383
+      startSourceChar: 2331
+      endSourceChar: 2331
+      line: 93
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1384
+      endInstruction: 1383
+      startSourceChar: 2331
+      endSourceChar: 2331
+      line: 93
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1384
+      endInstruction: 1383
+      startSourceChar: 2331
+      endSourceChar: 2345
+      line: 93
+      lineChar: 8
+      spanCodeSection: '_isEquipped = '
+    - startInstruction: 1384
+      endInstruction: 1403
+      startSourceChar: 2345
+      endSourceChar: 2360
+      line: 93
+      lineChar: 22
+      spanCodeSection: "true;\r\n        "
+    - startInstruction: 1404
+      endInstruction: 1403
+      startSourceChar: 2360
+      endSourceChar: 2360
+      line: 94
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1404
+      endInstruction: 1403
+      startSourceChar: 2360
+      endSourceChar: 2360
+      line: 94
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1404
+      endInstruction: 1403
+      startSourceChar: 2360
+      endSourceChar: 2369
+      line: 94
+      lineChar: 8
+      spanCodeSection: '_rider = '
+    - startInstruction: 1404
+      endInstruction: 1403
+      startSourceChar: 2369
+      endSourceChar: 2369
+      line: 94
+      lineChar: 17
+      spanCodeSection: 
+    - startInstruction: 1404
+      endInstruction: 1403
+      startSourceChar: 2369
+      endSourceChar: 2380
+      line: 94
+      lineChar: 17
+      spanCodeSection: _vrcPickup.
+    - startInstruction: 1404
+      endInstruction: 1427
+      startSourceChar: 2380
+      endSourceChar: 2406
+      line: 94
+      lineChar: 28
+      spanCodeSection: "currentPlayer;\r\n\r\n        "
+    - startInstruction: 1428
+      endInstruction: 1427
+      startSourceChar: 2406
+      endSourceChar: 2406
+      line: 96
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1428
+      endInstruction: 1427
+      startSourceChar: 2406
+      endSourceChar: 2406
+      line: 96
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1428
+      endInstruction: 1427
+      startSourceChar: 2406
+      endSourceChar: 2424
+      line: 96
+      lineChar: 8
+      spanCodeSection: 'var chestPosition '
+    - startInstruction: 1428
+      endInstruction: 1427
+      startSourceChar: 2424
+      endSourceChar: 2426
+      line: 96
+      lineChar: 26
+      spanCodeSection: '= '
+    - startInstruction: 1428
+      endInstruction: 1427
+      startSourceChar: 2426
+      endSourceChar: 2426
+      line: 96
+      lineChar: 28
+      spanCodeSection: 
+    - startInstruction: 1428
+      endInstruction: 1427
+      startSourceChar: 2426
+      endSourceChar: 2426
+      line: 96
+      lineChar: 28
+      spanCodeSection: 
+    - startInstruction: 1428
+      endInstruction: 1427
+      startSourceChar: 2426
+      endSourceChar: 2426
+      line: 96
+      lineChar: 28
+      spanCodeSection: 
+    - startInstruction: 1428
+      endInstruction: 1427
+      startSourceChar: 2426
+      endSourceChar: 2437
+      line: 96
+      lineChar: 28
+      spanCodeSection: _vrcPickup.
+    - startInstruction: 1428
+      endInstruction: 1427
+      startSourceChar: 2437
+      endSourceChar: 2451
+      line: 96
+      lineChar: 39
+      spanCodeSection: currentPlayer.
+    - startInstruction: 1428
+      endInstruction: 1451
+      startSourceChar: 2451
+      endSourceChar: 2467
+      line: 96
+      lineChar: 53
+      spanCodeSection: GetBonePosition(
+    - startInstruction: 1452
+      endInstruction: 1451
+      startSourceChar: 2467
+      endSourceChar: 2467
+      line: 96
+      lineChar: 69
+      spanCodeSection: 
+    - startInstruction: 1452
+      endInstruction: 1451
+      startSourceChar: 2467
+      endSourceChar: 2482
+      line: 96
+      lineChar: 69
+      spanCodeSection: HumanBodyBones.
+    - startInstruction: 1452
+      endInstruction: 1503
+      startSourceChar: 2482
+      endSourceChar: 2499
+      line: 96
+      lineChar: 84
+      spanCodeSection: "Chest);\r\n        "
+    - startInstruction: 1504
+      endInstruction: 1503
+      startSourceChar: 2499
+      endSourceChar: 2499
+      line: 97
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1504
+      endInstruction: 1503
+      startSourceChar: 2499
+      endSourceChar: 2499
+      line: 97
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1504
+      endInstruction: 1503
+      startSourceChar: 2499
+      endSourceChar: 2517
+      line: 97
+      lineChar: 8
+      spanCodeSection: 'var chestRotation '
+    - startInstruction: 1504
+      endInstruction: 1503
+      startSourceChar: 2517
+      endSourceChar: 2519
+      line: 97
+      lineChar: 26
+      spanCodeSection: '= '
+    - startInstruction: 1504
+      endInstruction: 1503
+      startSourceChar: 2519
+      endSourceChar: 2519
+      line: 97
+      lineChar: 28
+      spanCodeSection: 
+    - startInstruction: 1504
+      endInstruction: 1503
+      startSourceChar: 2519
+      endSourceChar: 2519
+      line: 97
+      lineChar: 28
+      spanCodeSection: 
+    - startInstruction: 1504
+      endInstruction: 1503
+      startSourceChar: 2519
+      endSourceChar: 2519
+      line: 97
+      lineChar: 28
+      spanCodeSection: 
+    - startInstruction: 1504
+      endInstruction: 1503
+      startSourceChar: 2519
+      endSourceChar: 2530
+      line: 97
+      lineChar: 28
+      spanCodeSection: _vrcPickup.
+    - startInstruction: 1504
+      endInstruction: 1503
+      startSourceChar: 2530
+      endSourceChar: 2544
+      line: 97
+      lineChar: 39
+      spanCodeSection: currentPlayer.
+    - startInstruction: 1504
+      endInstruction: 1527
+      startSourceChar: 2544
+      endSourceChar: 2560
+      line: 97
+      lineChar: 53
+      spanCodeSection: GetBoneRotation(
+    - startInstruction: 1528
+      endInstruction: 1527
+      startSourceChar: 2560
+      endSourceChar: 2560
+      line: 97
+      lineChar: 69
+      spanCodeSection: 
+    - startInstruction: 1528
+      endInstruction: 1527
+      startSourceChar: 2560
+      endSourceChar: 2575
+      line: 97
+      lineChar: 69
+      spanCodeSection: HumanBodyBones.
+    - startInstruction: 1528
+      endInstruction: 1579
+      startSourceChar: 2575
+      endSourceChar: 2594
+      line: 97
+      lineChar: 84
+      spanCodeSection: "Chest);\r\n\r\n        "
+    - startInstruction: 1580
+      endInstruction: 1579
+      startSourceChar: 2594
+      endSourceChar: 2594
+      line: 99
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1580
+      endInstruction: 1579
+      startSourceChar: 2594
+      endSourceChar: 2594
+      line: 99
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1580
+      endInstruction: 1579
+      startSourceChar: 2594
+      endSourceChar: 2617
+      line: 99
+      lineChar: 8
+      spanCodeSection: 'var zikuDriverPosition '
+    - startInstruction: 1580
+      endInstruction: 1579
+      startSourceChar: 2617
+      endSourceChar: 2619
+      line: 99
+      lineChar: 31
+      spanCodeSection: '= '
+    - startInstruction: 1580
+      endInstruction: 1579
+      startSourceChar: 2619
+      endSourceChar: 2619
+      line: 99
+      lineChar: 33
+      spanCodeSection: 
+    - startInstruction: 1580
+      endInstruction: 1579
+      startSourceChar: 2619
+      endSourceChar: 2629
+      line: 99
+      lineChar: 33
+      spanCodeSection: transform.
+    - startInstruction: 1580
+      endInstruction: 1623
+      startSourceChar: 2629
+      endSourceChar: 2648
+      line: 99
+      lineChar: 43
+      spanCodeSection: "position;\r\n        "
+    - startInstruction: 1624
+      endInstruction: 1623
+      startSourceChar: 2648
+      endSourceChar: 2648
+      line: 100
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1624
+      endInstruction: 1623
+      startSourceChar: 2648
+      endSourceChar: 2648
+      line: 100
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1624
+      endInstruction: 1623
+      startSourceChar: 2648
+      endSourceChar: 2671
+      line: 100
+      lineChar: 8
+      spanCodeSection: 'var zikuDriverRotation '
+    - startInstruction: 1624
+      endInstruction: 1623
+      startSourceChar: 2671
+      endSourceChar: 2673
+      line: 100
+      lineChar: 31
+      spanCodeSection: '= '
+    - startInstruction: 1624
+      endInstruction: 1623
+      startSourceChar: 2673
+      endSourceChar: 2673
+      line: 100
+      lineChar: 33
+      spanCodeSection: 
+    - startInstruction: 1624
+      endInstruction: 1623
+      startSourceChar: 2673
+      endSourceChar: 2683
+      line: 100
+      lineChar: 33
+      spanCodeSection: transform.
+    - startInstruction: 1624
+      endInstruction: 1667
+      startSourceChar: 2683
+      endSourceChar: 2704
+      line: 100
+      lineChar: 43
+      spanCodeSection: "rotation;\r\n\r\n        "
+    - startInstruction: 1668
+      endInstruction: 1667
+      startSourceChar: 2704
+      endSourceChar: 2704
+      line: 102
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1668
+      endInstruction: 1667
+      startSourceChar: 2704
+      endSourceChar: 2704
+      line: 102
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1668
+      endInstruction: 1667
+      startSourceChar: 2704
+      endSourceChar: 2715
+      line: 102
+      lineChar: 8
+      spanCodeSection: 'var offset '
+    - startInstruction: 1668
+      endInstruction: 1667
+      startSourceChar: 2715
+      endSourceChar: 2717
+      line: 102
+      lineChar: 19
+      spanCodeSection: '= '
+    - startInstruction: 1668
+      endInstruction: 1667
+      startSourceChar: 2717
+      endSourceChar: 2717
+      line: 102
+      lineChar: 21
+      spanCodeSection: 
+    - startInstruction: 1668
+      endInstruction: 1667
+      startSourceChar: 2717
+      endSourceChar: 2733
+      line: 102
+      lineChar: 21
+      spanCodeSection: 'chestRotation * '
+    - startInstruction: 1668
+      endInstruction: 1667
+      startSourceChar: 2733
+      endSourceChar: 2734
+      line: 102
+      lineChar: 37
+      spanCodeSection: (
+    - startInstruction: 1668
+      endInstruction: 1667
+      startSourceChar: 2734
+      endSourceChar: 2734
+      line: 102
+      lineChar: 38
+      spanCodeSection: 
+    - startInstruction: 1668
+      endInstruction: 1667
+      startSourceChar: 2734
+      endSourceChar: 2750
+      line: 102
+      lineChar: 38
+      spanCodeSection: 'chestPosition - '
+    - startInstruction: 1668
+      endInstruction: 1751
+      startSourceChar: 2750
+      endSourceChar: 2782
+      line: 102
+      lineChar: 54
+      spanCodeSection: "zikuDriverPosition);\r\n\r\n        "
+    - startInstruction: 1752
+      endInstruction: 1751
+      startSourceChar: 2782
+      endSourceChar: 2782
+      line: 104
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1752
+      endInstruction: 1751
+      startSourceChar: 2782
+      endSourceChar: 2782
+      line: 104
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1752
+      endInstruction: 1751
+      startSourceChar: 2782
+      endSourceChar: 2793
+      line: 104
+      lineChar: 8
+      spanCodeSection: SetOffsetY(
+    - startInstruction: 1752
+      endInstruction: 1751
+      startSourceChar: 2793
+      endSourceChar: 2793
+      line: 104
+      lineChar: 19
+      spanCodeSection: 
+    - startInstruction: 1752
+      endInstruction: 1751
+      startSourceChar: 2793
+      endSourceChar: 2800
+      line: 104
+      lineChar: 19
+      spanCodeSection: offset.
+    - startInstruction: 1752
+      endInstruction: 1791
+      startSourceChar: 2800
+      endSourceChar: 2813
+      line: 104
+      lineChar: 26
+      spanCodeSection: "y);\r\n        "
+    - startInstruction: 1792
+      endInstruction: 1791
+      startSourceChar: 2813
+      endSourceChar: 2813
+      line: 105
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1792
+      endInstruction: 1791
+      startSourceChar: 2813
+      endSourceChar: 2813
+      line: 105
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1792
+      endInstruction: 1791
+      startSourceChar: 2813
+      endSourceChar: 2824
+      line: 105
+      lineChar: 8
+      spanCodeSection: SetOffsetZ(
+    - startInstruction: 1792
+      endInstruction: 1791
+      startSourceChar: 2824
+      endSourceChar: 2824
+      line: 105
+      lineChar: 19
+      spanCodeSection: 
+    - startInstruction: 1792
+      endInstruction: 1791
+      startSourceChar: 2824
+      endSourceChar: 2831
+      line: 105
+      lineChar: 19
+      spanCodeSection: offset.
+    - startInstruction: 1792
+      endInstruction: 1831
+      startSourceChar: 2831
+      endSourceChar: 2846
+      line: 105
+      lineChar: 26
+      spanCodeSection: "z);\r\n\r\n        "
+    - startInstruction: 1832
+      endInstruction: 1831
+      startSourceChar: 2846
+      endSourceChar: 2846
+      line: 107
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1832
+      endInstruction: 1831
+      startSourceChar: 2846
+      endSourceChar: 2846
+      line: 107
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1832
+      endInstruction: 1831
+      startSourceChar: 2846
+      endSourceChar: 2846
+      line: 107
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1832
+      endInstruction: 1831
+      startSourceChar: 2846
+      endSourceChar: 2856
+      line: 107
+      lineChar: 8
+      spanCodeSection: _animator.
+    - startInstruction: 1832
+      endInstruction: 1831
+      startSourceChar: 2856
+      endSourceChar: 2861
+      line: 107
+      lineChar: 18
+      spanCodeSection: Play(
+    - startInstruction: 1832
+      endInstruction: 1855
+      startSourceChar: 2861
+      endSourceChar: 2896
+      line: 107
+      lineChar: 23
+      spanCodeSection: "nameof(PutOnZikuDriver));\r\n        "
+    - startInstruction: 1856
+      endInstruction: 1855
+      startSourceChar: 2896
+      endSourceChar: 2896
+      line: 108
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1856
+      endInstruction: 1855
+      startSourceChar: 2896
+      endSourceChar: 2896
+      line: 108
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1856
+      endInstruction: 1855
+      startSourceChar: 2896
+      endSourceChar: 2896
+      line: 108
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1856
+      endInstruction: 1855
+      startSourceChar: 2896
+      endSourceChar: 2907
+      line: 108
+      lineChar: 8
+      spanCodeSection: _vrcPickup.
+    - startInstruction: 1856
+      endInstruction: 1891
+      startSourceChar: 2907
+      endSourceChar: 2981
+      line: 108
+      lineChar: 19
+      spanCodeSection: "Drop();\r\n    }\r\n    #endregion\r\n\r\n    #region Setter
+        (with WriteLog)\r\n    "
+    - startInstruction: 1892
+      endInstruction: 1891
+      startSourceChar: 2981
+      endSourceChar: 3003
+      line: 113
+      lineChar: 4
+      spanCodeSection: private void SetState(
+    - startInstruction: 1892
+      endInstruction: 1899
+      startSourceChar: 3003
+      endSourceChar: 3019
+      line: 113
+      lineChar: 26
+      spanCodeSection: "int value)\r\n    "
+    - startInstruction: 1900
+      endInstruction: 1899
+      startSourceChar: 3019
+      endSourceChar: 3030
+      line: 114
+      lineChar: 4
+      spanCodeSection: "{\r\n        "
+    - startInstruction: 1900
+      endInstruction: 1899
+      startSourceChar: 3030
+      endSourceChar: 3030
+      line: 115
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1900
+      endInstruction: 1899
+      startSourceChar: 3030
+      endSourceChar: 3030
+      line: 115
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1900
+      endInstruction: 1899
+      startSourceChar: 3030
+      endSourceChar: 3039
+      line: 115
+      lineChar: 8
+      spanCodeSection: WriteLog(
+    - startInstruction: 1900
+      endInstruction: 1899
+      startSourceChar: 3039
+      endSourceChar: 3055
+      line: 115
+      lineChar: 17
+      spanCodeSection: 'nameof(_state), '
+    - startInstruction: 1900
+      endInstruction: 1899
+      startSourceChar: 3055
+      endSourceChar: 3055
+      line: 115
+      lineChar: 33
+      spanCodeSection: 
+    - startInstruction: 1900
+      endInstruction: 1899
+      startSourceChar: 3055
+      endSourceChar: 3055
+      line: 115
+      lineChar: 33
+      spanCodeSection: 
+    - startInstruction: 1900
+      endInstruction: 1899
+      startSourceChar: 3055
+      endSourceChar: 3064
+      line: 115
+      lineChar: 33
+      spanCodeSection: '_state + '
+    - startInstruction: 1900
+      endInstruction: 1955
+      startSourceChar: 3064
+      endSourceChar: 3071
+      line: 115
+      lineChar: 42
+      spanCodeSection: '"=>" + '
+    - startInstruction: 1956
+      endInstruction: 2047
+      startSourceChar: 3071
+      endSourceChar: 3088
+      line: 115
+      lineChar: 49
+      spanCodeSection: "value);\r\n        "
+    - startInstruction: 2048
+      endInstruction: 2047
+      startSourceChar: 3088
+      endSourceChar: 3088
+      line: 116
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 2048
+      endInstruction: 2047
+      startSourceChar: 3088
+      endSourceChar: 3088
+      line: 116
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 2048
+      endInstruction: 2047
+      startSourceChar: 3088
+      endSourceChar: 3097
+      line: 116
+      lineChar: 8
+      spanCodeSection: '_state = '
+    - startInstruction: 2048
+      endInstruction: 2087
+      startSourceChar: 3097
+      endSourceChar: 3118
+      line: 116
+      lineChar: 17
+      spanCodeSection: "value;\r\n    }\r\n\r\n    "
+    - startInstruction: 2088
+      endInstruction: 2087
+      startSourceChar: 3118
+      endSourceChar: 3142
+      line: 119
+      lineChar: 4
+      spanCodeSection: private void SetOffsetY(
+    - startInstruction: 2088
+      endInstruction: 2095
+      startSourceChar: 3142
+      endSourceChar: 3160
+      line: 119
+      lineChar: 28
+      spanCodeSection: "float value)\r\n    "
+    - startInstruction: 2096
+      endInstruction: 2095
+      startSourceChar: 3160
+      endSourceChar: 3171
+      line: 120
+      lineChar: 4
+      spanCodeSection: "{\r\n        "
+    - startInstruction: 2096
+      endInstruction: 2095
+      startSourceChar: 3171
+      endSourceChar: 3171
+      line: 121
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 2096
+      endInstruction: 2095
+      startSourceChar: 3171
+      endSourceChar: 3171
+      line: 121
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 2096
+      endInstruction: 2095
+      startSourceChar: 3171
+      endSourceChar: 3180
+      line: 121
+      lineChar: 8
+      spanCodeSection: WriteLog(
+    - startInstruction: 2096
+      endInstruction: 2095
+      startSourceChar: 3180
+      endSourceChar: 3198
+      line: 121
+      lineChar: 17
+      spanCodeSection: 'nameof(_offsetZ), '
+    - startInstruction: 2096
+      endInstruction: 2095
+      startSourceChar: 3198
+      endSourceChar: 3198
+      line: 121
+      lineChar: 35
+      spanCodeSection: 
+    - startInstruction: 2096
+      endInstruction: 2095
+      startSourceChar: 3198
+      endSourceChar: 3198
+      line: 121
+      lineChar: 35
+      spanCodeSection: 
+    - startInstruction: 2096
+      endInstruction: 2095
+      startSourceChar: 3198
+      endSourceChar: 3209
+      line: 121
+      lineChar: 35
+      spanCodeSection: '_offsetY + '
+    - startInstruction: 2096
+      endInstruction: 2151
+      startSourceChar: 3209
+      endSourceChar: 3216
+      line: 121
+      lineChar: 46
+      spanCodeSection: '"=>" + '
+    - startInstruction: 2152
+      endInstruction: 2243
+      startSourceChar: 3216
+      endSourceChar: 3233
+      line: 121
+      lineChar: 53
+      spanCodeSection: "value);\r\n        "
+    - startInstruction: 2244
+      endInstruction: 2243
+      startSourceChar: 3233
+      endSourceChar: 3233
+      line: 122
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 2244
+      endInstruction: 2243
+      startSourceChar: 3233
+      endSourceChar: 3233
+      line: 122
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 2244
+      endInstruction: 2243
+      startSourceChar: 3233
+      endSourceChar: 3244
+      line: 122
+      lineChar: 8
+      spanCodeSection: '_offsetY = '
+    - startInstruction: 2244
+      endInstruction: 2283
+      startSourceChar: 3244
+      endSourceChar: 3265
+      line: 122
+      lineChar: 19
+      spanCodeSection: "value;\r\n    }\r\n\r\n    "
+    - startInstruction: 2284
+      endInstruction: 2283
+      startSourceChar: 3265
+      endSourceChar: 3289
+      line: 125
+      lineChar: 4
+      spanCodeSection: private void SetOffsetZ(
+    - startInstruction: 2284
+      endInstruction: 2291
+      startSourceChar: 3289
+      endSourceChar: 3307
+      line: 125
+      lineChar: 28
+      spanCodeSection: "float value)\r\n    "
+    - startInstruction: 2292
+      endInstruction: 2291
+      startSourceChar: 3307
+      endSourceChar: 3318
+      line: 126
+      lineChar: 4
+      spanCodeSection: "{\r\n        "
+    - startInstruction: 2292
+      endInstruction: 2291
+      startSourceChar: 3318
+      endSourceChar: 3318
+      line: 127
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 2292
+      endInstruction: 2291
+      startSourceChar: 3318
+      endSourceChar: 3318
+      line: 127
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 2292
+      endInstruction: 2291
+      startSourceChar: 3318
+      endSourceChar: 3327
+      line: 127
+      lineChar: 8
+      spanCodeSection: WriteLog(
+    - startInstruction: 2292
+      endInstruction: 2291
+      startSourceChar: 3327
+      endSourceChar: 3345
+      line: 127
+      lineChar: 17
+      spanCodeSection: 'nameof(_offsetZ), '
+    - startInstruction: 2292
+      endInstruction: 2291
+      startSourceChar: 3345
+      endSourceChar: 3345
+      line: 127
+      lineChar: 35
+      spanCodeSection: 
+    - startInstruction: 2292
+      endInstruction: 2291
+      startSourceChar: 3345
+      endSourceChar: 3345
+      line: 127
+      lineChar: 35
+      spanCodeSection: 
+    - startInstruction: 2292
+      endInstruction: 2291
+      startSourceChar: 3345
+      endSourceChar: 3356
+      line: 127
+      lineChar: 35
+      spanCodeSection: '_offsetZ + '
+    - startInstruction: 2292
+      endInstruction: 2347
+      startSourceChar: 3356
+      endSourceChar: 3363
+      line: 127
+      lineChar: 46
+      spanCodeSection: '"=>" + '
+    - startInstruction: 2348
+      endInstruction: 2439
+      startSourceChar: 3363
+      endSourceChar: 3380
+      line: 127
+      lineChar: 53
+      spanCodeSection: "value);\r\n        "
+    - startInstruction: 2440
+      endInstruction: 2439
+      startSourceChar: 3380
+      endSourceChar: 3380
+      line: 128
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 2440
+      endInstruction: 2439
+      startSourceChar: 3380
+      endSourceChar: 3380
+      line: 128
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 2440
+      endInstruction: 2439
+      startSourceChar: 3380
+      endSourceChar: 3391
+      line: 128
+      lineChar: 8
+      spanCodeSection: '_offsetZ = '
+    - startInstruction: 2440
+      endInstruction: 2479
+      startSourceChar: 3391
+      endSourceChar: 3451
+      line: 128
+      lineChar: 19
+      spanCodeSection: "value;\r\n    }\r\n    #endregion\r\n\r\n    #region Utilities\r\n
+        \   "
+    - startInstruction: 2480
+      endInstruction: 2479
+      startSourceChar: 3451
+      endSourceChar: 3473
+      line: 133
+      lineChar: 4
+      spanCodeSection: private void WriteLog(
+    - startInstruction: 2480
+      endInstruction: 2479
+      startSourceChar: 3473
+      endSourceChar: 3486
+      line: 133
+      lineChar: 26
+      spanCodeSection: 'string type, '
+    - startInstruction: 2480
+      endInstruction: 2487
+      startSourceChar: 3486
+      endSourceChar: 3507
+      line: 133
+      lineChar: 39
+      spanCodeSection: "string message)\r\n    "
+    - startInstruction: 2488
+      endInstruction: 2487
+      startSourceChar: 3507
+      endSourceChar: 3518
+      line: 134
+      lineChar: 4
+      spanCodeSection: "{\r\n        "
+    - startInstruction: 2488
+      endInstruction: 2487
+      startSourceChar: 3518
+      endSourceChar: 3522
+      line: 135
+      lineChar: 8
+      spanCodeSection: if (
+    - startInstruction: 2488
+      endInstruction: 2503
+      startSourceChar: 3522
+      endSourceChar: 3541
+      line: 135
+      lineChar: 12
+      spanCodeSection: "_isDebug)\r\n        "
+    - startInstruction: 2504
+      endInstruction: 2503
+      startSourceChar: 3541
+      endSourceChar: 3556
+      line: 136
+      lineChar: 8
+      spanCodeSection: "{\r\n            "
+    - startInstruction: 2504
+      endInstruction: 2503
+      startSourceChar: 3556
+      endSourceChar: 3556
+      line: 137
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 2504
+      endInstruction: 2503
+      startSourceChar: 3556
+      endSourceChar: 3556
+      line: 137
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 2504
+      endInstruction: 2503
+      startSourceChar: 3556
+      endSourceChar: 3566
+      line: 137
+      lineChar: 12
+      spanCodeSection: 'var lines '
+    - startInstruction: 2504
+      endInstruction: 2503
+      startSourceChar: 3566
+      endSourceChar: 3568
+      line: 137
+      lineChar: 22
+      spanCodeSection: '= '
+    - startInstruction: 2504
+      endInstruction: 2503
+      startSourceChar: 3568
+      endSourceChar: 3568
+      line: 137
+      lineChar: 24
+      spanCodeSection: 
+    - startInstruction: 2504
+      endInstruction: 2503
+      startSourceChar: 3568
+      endSourceChar: 3568
+      line: 137
+      lineChar: 24
+      spanCodeSection: 
+    - startInstruction: 2504
+      endInstruction: 2503
+      startSourceChar: 3568
+      endSourceChar: 3568
+      line: 137
+      lineChar: 24
+      spanCodeSection: 
+    - startInstruction: 2504
+      endInstruction: 2503
+      startSourceChar: 3568
+      endSourceChar: 3574
+      line: 137
+      lineChar: 24
+      spanCodeSection: _text.
+    - startInstruction: 2504
+      endInstruction: 2503
+      startSourceChar: 3574
+      endSourceChar: 3579
+      line: 137
+      lineChar: 30
+      spanCodeSection: text.
+    - startInstruction: 2504
+      endInstruction: 2527
+      startSourceChar: 3579
+      endSourceChar: 3585
+      line: 137
+      lineChar: 35
+      spanCodeSection: Split(
+    - startInstruction: 2528
+      endInstruction: 2611
+      startSourceChar: 3585
+      endSourceChar: 3607
+      line: 137
+      lineChar: 41
+      spanCodeSection: "'\\n');\r\n\r\n            "
+    - startInstruction: 2612
+      endInstruction: 2611
+      startSourceChar: 3607
+      endSourceChar: 3611
+      line: 139
+      lineChar: 12
+      spanCodeSection: if (
+    - startInstruction: 2612
+      endInstruction: 2611
+      startSourceChar: 3611
+      endSourceChar: 3611
+      line: 139
+      lineChar: 16
+      spanCodeSection: 
+    - startInstruction: 2612
+      endInstruction: 2611
+      startSourceChar: 3611
+      endSourceChar: 3611
+      line: 139
+      lineChar: 16
+      spanCodeSection: 
+    - startInstruction: 2612
+      endInstruction: 2611
+      startSourceChar: 3611
+      endSourceChar: 3617
+      line: 139
+      lineChar: 16
+      spanCodeSection: lines.
+    - startInstruction: 2612
+      endInstruction: 2635
+      startSourceChar: 3617
+      endSourceChar: 3626
+      line: 139
+      lineChar: 22
+      spanCodeSection: 'Length > '
+    - startInstruction: 2636
+      endInstruction: 2683
+      startSourceChar: 3626
+      endSourceChar: 3643
+      line: 139
+      lineChar: 31
+      spanCodeSection: "17)\r\n            "
+    - startInstruction: 2684
+      endInstruction: 2683
+      startSourceChar: 3643
+      endSourceChar: 3662
+      line: 140
+      lineChar: 12
+      spanCodeSection: "{\r\n                "
+    - startInstruction: 2684
+      endInstruction: 2683
+      startSourceChar: 3662
+      endSourceChar: 3662
+      line: 141
+      lineChar: 16
+      spanCodeSection: 
+    - startInstruction: 2684
+      endInstruction: 2683
+      startSourceChar: 3662
+      endSourceChar: 3662
+      line: 141
+      lineChar: 16
+      spanCodeSection: 
+    - startInstruction: 2684
+      endInstruction: 2683
+      startSourceChar: 3662
+      endSourceChar: 3685
+      line: 141
+      lineChar: 16
+      spanCodeSection: 'var firstLineCharCount '
+    - startInstruction: 2684
+      endInstruction: 2683
+      startSourceChar: 3685
+      endSourceChar: 3687
+      line: 141
+      lineChar: 39
+      spanCodeSection: '= '
+    - startInstruction: 2684
+      endInstruction: 2683
+      startSourceChar: 3687
+      endSourceChar: 3687
+      line: 141
+      lineChar: 41
+      spanCodeSection: 
+    - startInstruction: 2684
+      endInstruction: 2683
+      startSourceChar: 3687
+      endSourceChar: 3687
+      line: 141
+      lineChar: 41
+      spanCodeSection: 
+    - startInstruction: 2684
+      endInstruction: 2683
+      startSourceChar: 3687
+      endSourceChar: 3687
+      line: 141
+      lineChar: 41
+      spanCodeSection: 
+    - startInstruction: 2684
+      endInstruction: 2683
+      startSourceChar: 3687
+      endSourceChar: 3693
+      line: 141
+      lineChar: 41
+      spanCodeSection: lines[
+    - startInstruction: 2684
+      endInstruction: 2683
+      startSourceChar: 3693
+      endSourceChar: 3693
+      line: 141
+      lineChar: 47
+      spanCodeSection: 
+    - startInstruction: 2684
+      endInstruction: 2683
+      startSourceChar: 3693
+      endSourceChar: 3696
+      line: 141
+      lineChar: 47
+      spanCodeSection: 0].
+    - startInstruction: 2684
+      endInstruction: 2739
+      startSourceChar: 3696
+      endSourceChar: 3705
+      line: 141
+      lineChar: 50
+      spanCodeSection: 'Length + '
+    - startInstruction: 2740
+      endInstruction: 2791
+      startSourceChar: 3705
+      endSourceChar: 3725
+      line: 141
+      lineChar: 59
+      spanCodeSection: "1;\r\n                "
+    - startInstruction: 2792
+      endInstruction: 2791
+      startSourceChar: 3725
+      endSourceChar: 3725
+      line: 142
+      lineChar: 16
+      spanCodeSection: 
+    - startInstruction: 2792
+      endInstruction: 2791
+      startSourceChar: 3725
+      endSourceChar: 3725
+      line: 142
+      lineChar: 16
+      spanCodeSection: 
+    - startInstruction: 2792
+      endInstruction: 2791
+      startSourceChar: 3725
+      endSourceChar: 3725
+      line: 142
+      lineChar: 16
+      spanCodeSection: 
+    - startInstruction: 2792
+      endInstruction: 2791
+      startSourceChar: 3725
+      endSourceChar: 3731
+      line: 142
+      lineChar: 16
+      spanCodeSection: _text.
+    - startInstruction: 2792
+      endInstruction: 2791
+      startSourceChar: 3731
+      endSourceChar: 3738
+      line: 142
+      lineChar: 22
+      spanCodeSection: 'text = '
+    - startInstruction: 2792
+      endInstruction: 2791
+      startSourceChar: 3738
+      endSourceChar: 3738
+      line: 142
+      lineChar: 29
+      spanCodeSection: 
+    - startInstruction: 2792
+      endInstruction: 2791
+      startSourceChar: 3738
+      endSourceChar: 3738
+      line: 142
+      lineChar: 29
+      spanCodeSection: 
+    - startInstruction: 2792
+      endInstruction: 2791
+      startSourceChar: 3738
+      endSourceChar: 3738
+      line: 142
+      lineChar: 29
+      spanCodeSection: 
+    - startInstruction: 2792
+      endInstruction: 2791
+      startSourceChar: 3738
+      endSourceChar: 3738
+      line: 142
+      lineChar: 29
+      spanCodeSection: 
+    - startInstruction: 2792
+      endInstruction: 2791
+      startSourceChar: 3738
+      endSourceChar: 3738
+      line: 142
+      lineChar: 29
+      spanCodeSection: 
+    - startInstruction: 2792
+      endInstruction: 2791
+      startSourceChar: 3738
+      endSourceChar: 3738
+      line: 142
+      lineChar: 29
+      spanCodeSection: 
+    - startInstruction: 2792
+      endInstruction: 2791
+      startSourceChar: 3738
+      endSourceChar: 3738
+      line: 142
+      lineChar: 29
+      spanCodeSection: 
+    - startInstruction: 2792
+      endInstruction: 2791
+      startSourceChar: 3738
+      endSourceChar: 3744
+      line: 142
+      lineChar: 29
+      spanCodeSection: _text.
+    - startInstruction: 2792
+      endInstruction: 2791
+      startSourceChar: 3744
+      endSourceChar: 3749
+      line: 142
+      lineChar: 35
+      spanCodeSection: text.
+    - startInstruction: 2792
+      endInstruction: 2815
+      startSourceChar: 3749
+      endSourceChar: 3759
+      line: 142
+      lineChar: 40
+      spanCodeSection: Substring(
+    - startInstruction: 2816
+      endInstruction: 2847
+      startSourceChar: 3759
+      endSourceChar: 3781
+      line: 142
+      lineChar: 50
+      spanCodeSection: 'firstLineCharCount) + '
+    - startInstruction: 2848
+      endInstruction: 2879
+      startSourceChar: 3781
+      endSourceChar: 3788
+      line: 142
+      lineChar: 72
+      spanCodeSection: 'type + '
+    - startInstruction: 2880
+      endInstruction: 2911
+      startSourceChar: 3788
+      endSourceChar: 3795
+      line: 142
+      lineChar: 79
+      spanCodeSection: '": " + '
+    - startInstruction: 2912
+      endInstruction: 2943
+      startSourceChar: 3795
+      endSourceChar: 3805
+      line: 142
+      lineChar: 86
+      spanCodeSection: 'message + '
+    - startInstruction: 2944
+      endInstruction: 3007
+      startSourceChar: 3805
+      endSourceChar: 3839
+      line: 142
+      lineChar: 96
+      spanCodeSection: "\"\\n\";\r\n            }\r\n            "
+    - startInstruction: 3008
+      endInstruction: 3007
+      startSourceChar: 3839
+      endSourceChar: 3857
+      line: 144
+      lineChar: 12
+      spanCodeSection: "else\r\n            "
+    - startInstruction: 3008
+      endInstruction: 3007
+      startSourceChar: 3857
+      endSourceChar: 3876
+      line: 145
+      lineChar: 12
+      spanCodeSection: "{\r\n                "
+    - startInstruction: 3008
+      endInstruction: 3007
+      startSourceChar: 3876
+      endSourceChar: 3876
+      line: 146
+      lineChar: 16
+      spanCodeSection: 
+    - startInstruction: 3008
+      endInstruction: 3007
+      startSourceChar: 3876
+      endSourceChar: 3876
+      line: 146
+      lineChar: 16
+      spanCodeSection: 
+    - startInstruction: 3008
+      endInstruction: 3007
+      startSourceChar: 3876
+      endSourceChar: 3876
+      line: 146
+      lineChar: 16
+      spanCodeSection: 
+    - startInstruction: 3008
+      endInstruction: 3007
+      startSourceChar: 3876
+      endSourceChar: 3882
+      line: 146
+      lineChar: 16
+      spanCodeSection: _text.
+    - startInstruction: 3008
+      endInstruction: 3007
+      startSourceChar: 3882
+      endSourceChar: 3890
+      line: 146
+      lineChar: 22
+      spanCodeSection: 'text += '
+    - startInstruction: 3008
+      endInstruction: 3007
+      startSourceChar: 3890
+      endSourceChar: 3890
+      line: 146
+      lineChar: 30
+      spanCodeSection: 
+    - startInstruction: 3008
+      endInstruction: 3007
+      startSourceChar: 3890
+      endSourceChar: 3890
+      line: 146
+      lineChar: 30
+      spanCodeSection: 
+    - startInstruction: 3008
+      endInstruction: 3007
+      startSourceChar: 3890
+      endSourceChar: 3890
+      line: 146
+      lineChar: 30
+      spanCodeSection: 
+    - startInstruction: 3008
+      endInstruction: 3007
+      startSourceChar: 3890
+      endSourceChar: 3897
+      line: 146
+      lineChar: 30
+      spanCodeSection: 'type + '
+    - startInstruction: 3008
+      endInstruction: 3039
+      startSourceChar: 3897
+      endSourceChar: 3904
+      line: 146
+      lineChar: 37
+      spanCodeSection: '": " + '
+    - startInstruction: 3040
+      endInstruction: 3071
+      startSourceChar: 3904
+      endSourceChar: 3914
+      line: 146
+      lineChar: 44
+      spanCodeSection: 'message + '
+    - startInstruction: 3072
+      endInstruction: 3072
+      startSourceChar: 3914
+      endSourceChar: 3914
+      line: 146
+      lineChar: 54
+      spanCodeSection: 
+  hasInteractEvent: 0
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: fieldDefinitions
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[UdonSharp.FieldDefinition,
+        UdonSharp.Editor]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: _parameterName
+    - Name: $v
+      Entry: 7
+      Data: 2|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 3|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 4|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: System.String, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 258
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemString
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: _parameterName
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: _parameterName
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 5|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: _animator
+    - Name: $v
+      Entry: 7
+      Data: 6|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 7|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 8|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: UnityEngine.Animator, UnityEngine.AnimationModule
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 2
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: UnityEngineAnimator
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: _animator
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: _animator
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 9|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: _vrcPickup
+    - Name: $v
+      Entry: 7
+      Data: 10|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 11|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 12|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: VRC.SDKBase.VRC_Pickup, VRCSDKBase
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 2
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: VRCSDK3ComponentsVRCPickup
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: _vrcPickup
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: _vrcPickup
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 13|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: _isEquipped
+    - Name: $v
+      Entry: 7
+      Data: 14|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 15|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 16|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: System.Boolean, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 2
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemBoolean
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: _isEquipped
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: _isEquipped
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 17|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: _rider
+    - Name: $v
+      Entry: 7
+      Data: 18|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 19|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 20|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: VRC.SDKBase.VRCPlayerApi, VRCSDKBase
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 2
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: VRCSDKBaseVRCPlayerApi
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: _rider
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: _rider
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 21|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: _state
+    - Name: $v
+      Entry: 7
+      Data: 22|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 23|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 24|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: System.Int32, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 2
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemInt32
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: _state
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: _state
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 25|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: _offsetY
+    - Name: $v
+      Entry: 7
+      Data: 26|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 27|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 28|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: System.Single, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 2
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemSingle
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: _offsetY
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: _offsetY
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 29|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: _offsetZ
+    - Name: $v
+      Entry: 7
+      Data: 30|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 31|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 28
+    - Name: declarationType
+      Entry: 3
+      Data: 2
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemSingle
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: _offsetZ
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: _offsetZ
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 32|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: _isDebug
+    - Name: $v
+      Entry: 7
+      Data: 33|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 34|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 16
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemBoolean
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: _isDebug
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: _isDebug
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 35|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 36|UnityEngine.SerializeField, UnityEngine.CoreModule
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: _text
+    - Name: $v
+      Entry: 7
+      Data: 37|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 38|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 39|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: UnityEngine.UI.Text, UnityEngine.UI
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: UnityEngineUIText
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: _text
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: _text
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 40|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 41|UnityEngine.SerializeField, UnityEngine.CoreModule
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
