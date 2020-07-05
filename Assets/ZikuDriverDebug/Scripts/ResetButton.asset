@@ -14,36 +14,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serializedUdonProgramAsset: {fileID: 11400000, guid: a69f1d8d9fd564a42960cebcc0deeb48,
     type: 2}
-  udonAssembly: ".data_start\r\n\r\n    .export _zikuDriver\r\n\r\n    __refl_const_intnl_udonTypeID:
-    %SystemInt64, null\r\n    __refl_const_intnl_udonTypeName: %SystemString, null\r\n
-    \   _zikuDriver: %VRCUdonUdonBehaviour, null\r\n    _initialRotation: %UnityEngineQuaternion,
-    null\r\n    _initialPosition: %UnityEngineVector3, null\r\n    __0_this_intnl_ResetButton:
-    %VRCUdonUdonBehaviour, this\r\n    __0_const_intnl_VRCUdonCommonInterfacesNetworkEventTarget:
-    %VRCUdonCommonInterfacesNetworkEventTarget, null\r\n    __0_const_intnl_SystemSingle:
-    %SystemSingle, null\r\n    __1_const_intnl_SystemSingle: %SystemSingle, null\r\n
+  udonAssembly: ".data_start\r\n\r\n    .export _zikuDriver\r\n    .export _rideWatch\r\n\r\n
+    \   __refl_const_intnl_udonTypeID: %SystemInt64, null\r\n    __refl_const_intnl_udonTypeName:
+    %SystemString, null\r\n    _rideWatch: %VRCUdonUdonBehaviour, null\r\n    _zikuDriver:
+    %VRCUdonUdonBehaviour, null\r\n    __0_this_intnl_ResetButton: %VRCUdonUdonBehaviour,
+    this\r\n    __0_const_intnl_VRCUdonCommonInterfacesNetworkEventTarget: %VRCUdonCommonInterfacesNetworkEventTarget,
+    null\r\n    __0_const_intnl_SystemSingle: %SystemSingle, null\r\n    __1_const_intnl_SystemSingle:
+    %SystemSingle, null\r\n    __2_const_intnl_SystemSingle: %SystemSingle, null\r\n
     \   __0_const_intnl_SystemString: %SystemString, null\r\n    __1_const_intnl_SystemString:
     %SystemString, null\r\n    __0_const_intnl_SystemUInt32: %SystemUInt32, null\r\n
     \   __0_intnl_UnityEngineGameObject: %UnityEngineGameObject, null\r\n    __1_intnl_UnityEngineGameObject:
-    %UnityEngineGameObject, null\r\n    __0_intnl_UnityEngineTransform: %UnityEngineTransform,
-    null\r\n    __1_intnl_UnityEngineTransform: %UnityEngineTransform, null\r\n    __0_intnl_returnTarget_UInt32:
-    %SystemUInt32, null\r\n\r\n.data_end\r\n\r\n        \r\n         # using UdonSharp;\r\n
-    \       \r\n         # using UnityEngine;\r\n        \r\n         # using VRC.Udon.Common.Interfaces;\r\n
+    %UnityEngineGameObject, null\r\n    __2_intnl_UnityEngineGameObject: %UnityEngineGameObject,
+    null\r\n    __3_intnl_UnityEngineGameObject: %UnityEngineGameObject, null\r\n
+    \   __0_intnl_UnityEngineQuaternion: %UnityEngineQuaternion, null\r\n    __1_intnl_UnityEngineQuaternion:
+    %UnityEngineQuaternion, null\r\n    __0_intnl_UnityEngineTransform: %UnityEngineTransform,
+    null\r\n    __1_intnl_UnityEngineTransform: %UnityEngineTransform, null\r\n    __2_intnl_UnityEngineTransform:
+    %UnityEngineTransform, null\r\n    __3_intnl_UnityEngineTransform: %UnityEngineTransform,
+    null\r\n    __0_intnl_returnTarget_UInt32: %SystemUInt32, null\r\n    __0_intnl_UnityEngineVector3:
+    %UnityEngineVector3, null\r\n    __1_intnl_UnityEngineVector3: %UnityEngineVector3,
+    null\r\n\r\n.data_end\r\n\r\n        \r\n         # using UdonSharp;\r\n        \r\n
+    \        # using UnityEngine;\r\n        \r\n         # using VRC.Udon.Common.Interfaces;\r\n
     \       \r\n         # public class ResetButton : UdonSharpBehaviour\r\n.code_start\r\n
-    \       \r\n         # private Vector3 _initialPosition;\r\n        \r\n         #
-    private Quaternion _initialRotation;\r\n        \r\n         # [SerializeField]\r\n
-    \       \r\n         # private ZikuDriver _zikuDriver;\r\n        \r\n         #
-    private void Start()\r\n    .export _start\r\n        \r\n    _start:\r\n        \r\n
-    \       PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         # {\r\n        \r\n
-    \        # _initialPosition = new Vector3(0f, 0.05f, 0f);\r\n        PUSH, __0_const_intnl_SystemSingle\r\n
-    \       PUSH, __1_const_intnl_SystemSingle\r\n        PUSH, __0_const_intnl_SystemSingle\r\n
-    \       PUSH, _initialPosition\r\n        EXTERN, \"UnityEngineVector3.__ctor__SystemSingle_SystemSingle_SystemSingle__UnityEngineVector3\"\r\n
-    \       \r\n         # _initialRotation = Quaternion.identity;\r\n        PUSH,
-    _initialRotation\r\n        EXTERN, \"UnityEngineQuaternion.__get_identity__UnityEngineQuaternion\"\r\n
-    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\r\n        COPY\r\n
-    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        \r\n        \r\n
-    \        # public override void Interact()\r\n    .export _interact\r\n        \r\n
-    \   _interact:\r\n        \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n
-    \        # {\r\n        \r\n         # SendCustomNetworkEvent(NetworkEventTarget.All,
+    \       \r\n         # [SerializeField]\r\n        \r\n         # private ZikuDriver
+    _zikuDriver;\r\n        \r\n         # [SerializeField]\r\n        \r\n         #
+    private RideWatch _rideWatch;\r\n        \r\n         # private void Start()\r\n
+    \   .export _start\r\n        \r\n    _start:\r\n        \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n
+    \       \r\n         # {\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
+    epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
+    \       \r\n        \r\n         # public override void Interact()\r\n    .export
+    _interact\r\n        \r\n    _interact:\r\n        \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n
+    \       \r\n         # {\r\n        \r\n         # SendCustomNetworkEvent(NetworkEventTarget.All,
     nameof(Reset));\r\n        PUSH, __0_this_intnl_ResetButton\r\n        PUSH, __0_const_intnl_VRCUdonCommonInterfacesNetworkEventTarget\r\n
     \       PUSH, __0_const_intnl_SystemString\r\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomNetworkEvent__VRCUdonCommonInterfacesNetworkEventTarget_SystemString__SystemVoid\"\r\n
     \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\r\n        COPY\r\n
@@ -52,19 +52,43 @@ MonoBehaviour:
     \       \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         #
     {\r\n        \r\n         # _zikuDriver.ResetState();\r\n        PUSH, _zikuDriver\r\n
     \       PUSH, __1_const_intnl_SystemString\r\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomEvent__SystemString__SystemVoid\"\r\n
-    \       \r\n         # _zikuDriver.gameObject.transform.position = _initialPosition;\r\n
-    \       PUSH, _zikuDriver\r\n        PUSH, __0_intnl_UnityEngineGameObject\r\n
+    \       \r\n         # _zikuDriver.gameObject.transform.position = new Vector3(0f,
+    0.05f, 0f);\r\n        PUSH, _zikuDriver\r\n        PUSH, __0_intnl_UnityEngineGameObject\r\n
     \       EXTERN, \"UnityEngineComponent.__get_gameObject__UnityEngineGameObject\"\r\n
     \       PUSH, __0_intnl_UnityEngineGameObject\r\n        PUSH, __0_intnl_UnityEngineTransform\r\n
     \       EXTERN, \"UnityEngineGameObject.__get_transform__UnityEngineTransform\"\r\n
-    \       PUSH, __0_intnl_UnityEngineTransform\r\n        PUSH, _initialPosition\r\n
+    \       PUSH, __0_const_intnl_SystemSingle\r\n        PUSH, __1_const_intnl_SystemSingle\r\n
+    \       PUSH, __0_const_intnl_SystemSingle\r\n        PUSH, __0_intnl_UnityEngineVector3\r\n
+    \       EXTERN, \"UnityEngineVector3.__ctor__SystemSingle_SystemSingle_SystemSingle__UnityEngineVector3\"\r\n
+    \       PUSH, __0_intnl_UnityEngineTransform\r\n        PUSH, __0_intnl_UnityEngineVector3\r\n
     \       EXTERN, \"UnityEngineTransform.__set_position__UnityEngineVector3__SystemVoid\"\r\n
-    \       \r\n         # _zikuDriver.gameObject.transform.rotation = _initialRotation;\r\n
+    \       \r\n         # _zikuDriver.gameObject.transform.rotation = Quaternion.identity;\r\n
     \       PUSH, _zikuDriver\r\n        PUSH, __1_intnl_UnityEngineGameObject\r\n
     \       EXTERN, \"UnityEngineComponent.__get_gameObject__UnityEngineGameObject\"\r\n
     \       PUSH, __1_intnl_UnityEngineGameObject\r\n        PUSH, __1_intnl_UnityEngineTransform\r\n
     \       EXTERN, \"UnityEngineGameObject.__get_transform__UnityEngineTransform\"\r\n
-    \       PUSH, __1_intnl_UnityEngineTransform\r\n        PUSH, _initialRotation\r\n
+    \       PUSH, __0_intnl_UnityEngineQuaternion\r\n        EXTERN, \"UnityEngineQuaternion.__get_identity__UnityEngineQuaternion\"\r\n
+    \       PUSH, __1_intnl_UnityEngineTransform\r\n        PUSH, __0_intnl_UnityEngineQuaternion\r\n
+    \       EXTERN, \"UnityEngineTransform.__set_rotation__UnityEngineQuaternion__SystemVoid\"\r\n
+    \       \r\n         # _rideWatch.ResetState();\r\n        PUSH, _rideWatch\r\n
+    \       PUSH, __1_const_intnl_SystemString\r\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomEvent__SystemString__SystemVoid\"\r\n
+    \       \r\n         # _rideWatch.gameObject.transform.position = new Vector3(0.2f,
+    0.05f, 0f);\r\n        PUSH, _rideWatch\r\n        PUSH, __2_intnl_UnityEngineGameObject\r\n
+    \       EXTERN, \"UnityEngineComponent.__get_gameObject__UnityEngineGameObject\"\r\n
+    \       PUSH, __2_intnl_UnityEngineGameObject\r\n        PUSH, __2_intnl_UnityEngineTransform\r\n
+    \       EXTERN, \"UnityEngineGameObject.__get_transform__UnityEngineTransform\"\r\n
+    \       PUSH, __2_const_intnl_SystemSingle\r\n        PUSH, __1_const_intnl_SystemSingle\r\n
+    \       PUSH, __0_const_intnl_SystemSingle\r\n        PUSH, __1_intnl_UnityEngineVector3\r\n
+    \       EXTERN, \"UnityEngineVector3.__ctor__SystemSingle_SystemSingle_SystemSingle__UnityEngineVector3\"\r\n
+    \       PUSH, __2_intnl_UnityEngineTransform\r\n        PUSH, __1_intnl_UnityEngineVector3\r\n
+    \       EXTERN, \"UnityEngineTransform.__set_position__UnityEngineVector3__SystemVoid\"\r\n
+    \       \r\n         # _rideWatch.gameObject.transform.rotation = Quaternion.identity;\r\n
+    \       PUSH, _rideWatch\r\n        PUSH, __3_intnl_UnityEngineGameObject\r\n
+    \       EXTERN, \"UnityEngineComponent.__get_gameObject__UnityEngineGameObject\"\r\n
+    \       PUSH, __3_intnl_UnityEngineGameObject\r\n        PUSH, __3_intnl_UnityEngineTransform\r\n
+    \       EXTERN, \"UnityEngineGameObject.__get_transform__UnityEngineTransform\"\r\n
+    \       PUSH, __1_intnl_UnityEngineQuaternion\r\n        EXTERN, \"UnityEngineQuaternion.__get_identity__UnityEngineQuaternion\"\r\n
+    \       PUSH, __3_intnl_UnityEngineTransform\r\n        PUSH, __1_intnl_UnityEngineQuaternion\r\n
     \       EXTERN, \"UnityEngineTransform.__set_rotation__UnityEngineQuaternion__SystemVoid\"\r\n
     \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\r\n        COPY\r\n
     \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        \r\n.code_end\r\n"
@@ -203,464 +227,639 @@ MonoBehaviour:
     - startInstruction: 0
       endInstruction: -1
       startSourceChar: 129
-      endSourceChar: 137
+      endSourceChar: 130
       line: 6
       lineChar: 4
-      spanCodeSection: 'private '
+      spanCodeSection: '['
     - startInstruction: 0
       endInstruction: -1
-      startSourceChar: 137
-      endSourceChar: 137
+      startSourceChar: 130
+      endSourceChar: 130
       line: 6
-      lineChar: 12
+      lineChar: 5
       spanCodeSection: 
     - startInstruction: 0
       endInstruction: -1
-      startSourceChar: 137
-      endSourceChar: 168
+      startSourceChar: 130
+      endSourceChar: 159
       line: 6
-      lineChar: 12
-      spanCodeSection: "Vector3 _initialPosition;\r\n    "
+      lineChar: 5
+      spanCodeSection: "SerializeField]\r\n    private "
     - startInstruction: 0
       endInstruction: -1
-      startSourceChar: 168
-      endSourceChar: 176
-      line: 7
-      lineChar: 4
-      spanCodeSection: 'private '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 176
-      endSourceChar: 176
+      startSourceChar: 159
+      endSourceChar: 159
       line: 7
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 0
       endInstruction: -1
-      startSourceChar: 176
-      endSourceChar: 212
+      startSourceChar: 159
+      endSourceChar: 190
       line: 7
       lineChar: 12
-      spanCodeSection: "Quaternion _initialRotation;\r\n\r\n    "
+      spanCodeSection: "ZikuDriver _zikuDriver;\r\n\r\n    "
     - startInstruction: 0
       endInstruction: -1
-      startSourceChar: 212
-      endSourceChar: 213
+      startSourceChar: 190
+      endSourceChar: 191
       line: 9
       lineChar: 4
       spanCodeSection: '['
     - startInstruction: 0
       endInstruction: -1
-      startSourceChar: 213
-      endSourceChar: 213
+      startSourceChar: 191
+      endSourceChar: 191
       line: 9
       lineChar: 5
       spanCodeSection: 
     - startInstruction: 0
       endInstruction: -1
-      startSourceChar: 213
-      endSourceChar: 242
+      startSourceChar: 191
+      endSourceChar: 220
       line: 9
       lineChar: 5
       spanCodeSection: "SerializeField]\r\n    private "
     - startInstruction: 0
       endInstruction: -1
-      startSourceChar: 242
-      endSourceChar: 242
+      startSourceChar: 220
+      endSourceChar: 220
       line: 10
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 0
       endInstruction: -1
-      startSourceChar: 242
-      endSourceChar: 273
+      startSourceChar: 220
+      endSourceChar: 249
       line: 10
       lineChar: 12
-      spanCodeSection: "ZikuDriver _zikuDriver;\r\n\r\n    "
+      spanCodeSection: "RideWatch _rideWatch;\r\n\r\n    "
     - startInstruction: 0
       endInstruction: 7
-      startSourceChar: 273
-      endSourceChar: 299
+      startSourceChar: 249
+      endSourceChar: 275
       line: 12
       lineChar: 4
       spanCodeSection: "private void Start()\r\n    "
     - startInstruction: 8
-      endInstruction: 7
-      startSourceChar: 299
-      endSourceChar: 310
+      endInstruction: 27
+      startSourceChar: 275
+      endSourceChar: 291
       line: 13
       lineChar: 4
-      spanCodeSection: "{\r\n        "
-    - startInstruction: 8
-      endInstruction: 7
-      startSourceChar: 310
-      endSourceChar: 310
-      line: 14
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 8
-      endInstruction: 7
-      startSourceChar: 310
-      endSourceChar: 310
-      line: 14
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 8
-      endInstruction: 7
-      startSourceChar: 310
-      endSourceChar: 329
-      line: 14
-      lineChar: 8
-      spanCodeSection: '_initialPosition = '
-    - startInstruction: 8
-      endInstruction: 7
-      startSourceChar: 329
-      endSourceChar: 333
-      line: 14
-      lineChar: 27
-      spanCodeSection: 'new '
-    - startInstruction: 8
-      endInstruction: 7
-      startSourceChar: 333
-      endSourceChar: 341
-      line: 14
-      lineChar: 31
-      spanCodeSection: Vector3(
-    - startInstruction: 8
-      endInstruction: 7
-      startSourceChar: 341
-      endSourceChar: 341
-      line: 14
-      lineChar: 39
-      spanCodeSection: 
-    - startInstruction: 8
-      endInstruction: 7
-      startSourceChar: 341
-      endSourceChar: 345
-      line: 14
-      lineChar: 39
-      spanCodeSection: '0f, '
-    - startInstruction: 8
-      endInstruction: 7
-      startSourceChar: 345
-      endSourceChar: 345
-      line: 14
-      lineChar: 43
-      spanCodeSection: 
-    - startInstruction: 8
-      endInstruction: 7
-      startSourceChar: 345
-      endSourceChar: 352
-      line: 14
-      lineChar: 43
-      spanCodeSection: '0.05f, '
-    - startInstruction: 8
-      endInstruction: 7
-      startSourceChar: 352
-      endSourceChar: 352
-      line: 14
-      lineChar: 50
-      spanCodeSection: 
-    - startInstruction: 8
-      endInstruction: 47
-      startSourceChar: 352
-      endSourceChar: 366
-      line: 14
-      lineChar: 50
-      spanCodeSection: "0f);\r\n        "
-    - startInstruction: 48
-      endInstruction: 47
-      startSourceChar: 366
-      endSourceChar: 366
-      line: 15
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 48
-      endInstruction: 47
-      startSourceChar: 366
-      endSourceChar: 366
-      line: 15
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 48
-      endInstruction: 47
-      startSourceChar: 366
-      endSourceChar: 385
-      line: 15
-      lineChar: 8
-      spanCodeSection: '_initialRotation = '
-    - startInstruction: 48
-      endInstruction: 47
-      startSourceChar: 385
-      endSourceChar: 385
-      line: 15
-      lineChar: 27
-      spanCodeSection: 
-    - startInstruction: 48
-      endInstruction: 47
-      startSourceChar: 385
-      endSourceChar: 396
-      line: 15
-      lineChar: 27
-      spanCodeSection: Quaternion.
-    - startInstruction: 48
-      endInstruction: 83
-      startSourceChar: 396
-      endSourceChar: 420
-      line: 15
-      lineChar: 38
-      spanCodeSection: "identity;\r\n    }\r\n\r\n    "
-    - startInstruction: 84
-      endInstruction: 91
-      startSourceChar: 420
-      endSourceChar: 457
-      line: 18
+      spanCodeSection: "{\r\n    }\r\n\r\n    "
+    - startInstruction: 28
+      endInstruction: 35
+      startSourceChar: 291
+      endSourceChar: 328
+      line: 16
       lineChar: 4
       spanCodeSection: "public override void Interact()\r\n    "
-    - startInstruction: 92
-      endInstruction: 91
-      startSourceChar: 457
-      endSourceChar: 468
-      line: 19
+    - startInstruction: 36
+      endInstruction: 35
+      startSourceChar: 328
+      endSourceChar: 339
+      line: 17
       lineChar: 4
       spanCodeSection: "{\r\n        "
-    - startInstruction: 92
-      endInstruction: 91
-      startSourceChar: 468
-      endSourceChar: 468
-      line: 20
+    - startInstruction: 36
+      endInstruction: 35
+      startSourceChar: 339
+      endSourceChar: 339
+      line: 18
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 92
-      endInstruction: 91
-      startSourceChar: 468
-      endSourceChar: 468
-      line: 20
+    - startInstruction: 36
+      endInstruction: 35
+      startSourceChar: 339
+      endSourceChar: 339
+      line: 18
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 92
-      endInstruction: 91
-      startSourceChar: 468
-      endSourceChar: 491
-      line: 20
+    - startInstruction: 36
+      endInstruction: 35
+      startSourceChar: 339
+      endSourceChar: 362
+      line: 18
       lineChar: 8
       spanCodeSection: SendCustomNetworkEvent(
-    - startInstruction: 92
-      endInstruction: 91
-      startSourceChar: 491
-      endSourceChar: 491
-      line: 20
+    - startInstruction: 36
+      endInstruction: 35
+      startSourceChar: 362
+      endSourceChar: 362
+      line: 18
       lineChar: 31
       spanCodeSection: 
-    - startInstruction: 92
-      endInstruction: 91
-      startSourceChar: 491
-      endSourceChar: 510
-      line: 20
+    - startInstruction: 36
+      endInstruction: 35
+      startSourceChar: 362
+      endSourceChar: 381
+      line: 18
       lineChar: 31
       spanCodeSection: NetworkEventTarget.
-    - startInstruction: 92
-      endInstruction: 91
-      startSourceChar: 510
-      endSourceChar: 515
-      line: 20
+    - startInstruction: 36
+      endInstruction: 35
+      startSourceChar: 381
+      endSourceChar: 386
+      line: 18
       lineChar: 50
       spanCodeSection: 'All, '
-    - startInstruction: 92
-      endInstruction: 143
-      startSourceChar: 515
-      endSourceChar: 545
-      line: 20
+    - startInstruction: 36
+      endInstruction: 87
+      startSourceChar: 386
+      endSourceChar: 416
+      line: 18
       lineChar: 55
       spanCodeSection: "nameof(Reset));\r\n    }\r\n\r\n    "
-    - startInstruction: 144
-      endInstruction: 151
-      startSourceChar: 545
-      endSourceChar: 570
-      line: 23
+    - startInstruction: 88
+      endInstruction: 95
+      startSourceChar: 416
+      endSourceChar: 441
+      line: 21
       lineChar: 4
       spanCodeSection: "public void Reset()\r\n    "
-    - startInstruction: 152
-      endInstruction: 151
-      startSourceChar: 570
-      endSourceChar: 581
-      line: 24
+    - startInstruction: 96
+      endInstruction: 95
+      startSourceChar: 441
+      endSourceChar: 452
+      line: 22
       lineChar: 4
       spanCodeSection: "{\r\n        "
-    - startInstruction: 152
-      endInstruction: 151
-      startSourceChar: 581
-      endSourceChar: 581
-      line: 25
+    - startInstruction: 96
+      endInstruction: 95
+      startSourceChar: 452
+      endSourceChar: 452
+      line: 23
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 152
-      endInstruction: 151
-      startSourceChar: 581
-      endSourceChar: 581
-      line: 25
+    - startInstruction: 96
+      endInstruction: 95
+      startSourceChar: 452
+      endSourceChar: 452
+      line: 23
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 152
-      endInstruction: 151
-      startSourceChar: 581
-      endSourceChar: 581
-      line: 25
+    - startInstruction: 96
+      endInstruction: 95
+      startSourceChar: 452
+      endSourceChar: 452
+      line: 23
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 152
-      endInstruction: 151
-      startSourceChar: 581
-      endSourceChar: 593
-      line: 25
+    - startInstruction: 96
+      endInstruction: 95
+      startSourceChar: 452
+      endSourceChar: 464
+      line: 23
       lineChar: 8
       spanCodeSection: _zikuDriver.
-    - startInstruction: 152
-      endInstruction: 175
-      startSourceChar: 593
-      endSourceChar: 616
-      line: 25
+    - startInstruction: 96
+      endInstruction: 119
+      startSourceChar: 464
+      endSourceChar: 487
+      line: 23
       lineChar: 20
       spanCodeSection: "ResetState();\r\n        "
-    - startInstruction: 176
-      endInstruction: 175
-      startSourceChar: 616
-      endSourceChar: 616
-      line: 26
+    - startInstruction: 120
+      endInstruction: 119
+      startSourceChar: 487
+      endSourceChar: 487
+      line: 24
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 176
-      endInstruction: 175
-      startSourceChar: 616
-      endSourceChar: 616
-      line: 26
+    - startInstruction: 120
+      endInstruction: 119
+      startSourceChar: 487
+      endSourceChar: 487
+      line: 24
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 176
-      endInstruction: 175
-      startSourceChar: 616
-      endSourceChar: 616
-      line: 26
+    - startInstruction: 120
+      endInstruction: 119
+      startSourceChar: 487
+      endSourceChar: 487
+      line: 24
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 176
-      endInstruction: 175
-      startSourceChar: 616
-      endSourceChar: 616
-      line: 26
+    - startInstruction: 120
+      endInstruction: 119
+      startSourceChar: 487
+      endSourceChar: 487
+      line: 24
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 176
-      endInstruction: 175
-      startSourceChar: 616
-      endSourceChar: 616
-      line: 26
+    - startInstruction: 120
+      endInstruction: 119
+      startSourceChar: 487
+      endSourceChar: 487
+      line: 24
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 176
-      endInstruction: 175
-      startSourceChar: 616
-      endSourceChar: 628
-      line: 26
+    - startInstruction: 120
+      endInstruction: 119
+      startSourceChar: 487
+      endSourceChar: 499
+      line: 24
       lineChar: 8
       spanCodeSection: _zikuDriver.
-    - startInstruction: 176
-      endInstruction: 175
-      startSourceChar: 628
-      endSourceChar: 639
-      line: 26
+    - startInstruction: 120
+      endInstruction: 119
+      startSourceChar: 499
+      endSourceChar: 510
+      line: 24
       lineChar: 20
       spanCodeSection: gameObject.
-    - startInstruction: 176
-      endInstruction: 199
-      startSourceChar: 639
-      endSourceChar: 649
-      line: 26
+    - startInstruction: 120
+      endInstruction: 143
+      startSourceChar: 510
+      endSourceChar: 520
+      line: 24
       lineChar: 31
       spanCodeSection: transform.
-    - startInstruction: 200
-      endInstruction: 223
-      startSourceChar: 649
-      endSourceChar: 660
-      line: 26
+    - startInstruction: 144
+      endInstruction: 167
+      startSourceChar: 520
+      endSourceChar: 531
+      line: 24
       lineChar: 41
       spanCodeSection: 'position = '
-    - startInstruction: 224
-      endInstruction: 247
-      startSourceChar: 660
-      endSourceChar: 687
-      line: 26
+    - startInstruction: 168
+      endInstruction: 167
+      startSourceChar: 531
+      endSourceChar: 535
+      line: 24
       lineChar: 52
-      spanCodeSection: "_initialPosition;\r\n        "
-    - startInstruction: 248
-      endInstruction: 247
-      startSourceChar: 687
-      endSourceChar: 687
-      line: 27
+      spanCodeSection: 'new '
+    - startInstruction: 168
+      endInstruction: 167
+      startSourceChar: 535
+      endSourceChar: 543
+      line: 24
+      lineChar: 56
+      spanCodeSection: Vector3(
+    - startInstruction: 168
+      endInstruction: 167
+      startSourceChar: 543
+      endSourceChar: 543
+      line: 24
+      lineChar: 64
+      spanCodeSection: 
+    - startInstruction: 168
+      endInstruction: 167
+      startSourceChar: 543
+      endSourceChar: 547
+      line: 24
+      lineChar: 64
+      spanCodeSection: '0f, '
+    - startInstruction: 168
+      endInstruction: 167
+      startSourceChar: 547
+      endSourceChar: 547
+      line: 24
+      lineChar: 68
+      spanCodeSection: 
+    - startInstruction: 168
+      endInstruction: 167
+      startSourceChar: 547
+      endSourceChar: 554
+      line: 24
+      lineChar: 68
+      spanCodeSection: '0.05f, '
+    - startInstruction: 168
+      endInstruction: 167
+      startSourceChar: 554
+      endSourceChar: 554
+      line: 24
+      lineChar: 75
+      spanCodeSection: 
+    - startInstruction: 168
+      endInstruction: 231
+      startSourceChar: 554
+      endSourceChar: 568
+      line: 24
+      lineChar: 75
+      spanCodeSection: "0f);\r\n        "
+    - startInstruction: 232
+      endInstruction: 231
+      startSourceChar: 568
+      endSourceChar: 568
+      line: 25
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 248
-      endInstruction: 247
-      startSourceChar: 687
-      endSourceChar: 687
-      line: 27
+    - startInstruction: 232
+      endInstruction: 231
+      startSourceChar: 568
+      endSourceChar: 568
+      line: 25
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 248
-      endInstruction: 247
-      startSourceChar: 687
-      endSourceChar: 687
-      line: 27
+    - startInstruction: 232
+      endInstruction: 231
+      startSourceChar: 568
+      endSourceChar: 568
+      line: 25
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 248
-      endInstruction: 247
-      startSourceChar: 687
-      endSourceChar: 687
-      line: 27
+    - startInstruction: 232
+      endInstruction: 231
+      startSourceChar: 568
+      endSourceChar: 568
+      line: 25
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 248
-      endInstruction: 247
-      startSourceChar: 687
-      endSourceChar: 687
-      line: 27
+    - startInstruction: 232
+      endInstruction: 231
+      startSourceChar: 568
+      endSourceChar: 568
+      line: 25
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 248
-      endInstruction: 247
-      startSourceChar: 687
-      endSourceChar: 699
-      line: 27
+    - startInstruction: 232
+      endInstruction: 231
+      startSourceChar: 568
+      endSourceChar: 580
+      line: 25
       lineChar: 8
       spanCodeSection: _zikuDriver.
-    - startInstruction: 248
-      endInstruction: 247
-      startSourceChar: 699
-      endSourceChar: 710
-      line: 27
+    - startInstruction: 232
+      endInstruction: 231
+      startSourceChar: 580
+      endSourceChar: 591
+      line: 25
       lineChar: 20
       spanCodeSection: gameObject.
-    - startInstruction: 248
-      endInstruction: 271
-      startSourceChar: 710
-      endSourceChar: 720
-      line: 27
+    - startInstruction: 232
+      endInstruction: 255
+      startSourceChar: 591
+      endSourceChar: 601
+      line: 25
       lineChar: 31
       spanCodeSection: transform.
-    - startInstruction: 272
-      endInstruction: 295
-      startSourceChar: 720
-      endSourceChar: 731
-      line: 27
+    - startInstruction: 256
+      endInstruction: 279
+      startSourceChar: 601
+      endSourceChar: 612
+      line: 25
       lineChar: 41
       spanCodeSection: 'rotation = '
-    - startInstruction: 296
-      endInstruction: 296
-      startSourceChar: 731
-      endSourceChar: 731
-      line: 27
+    - startInstruction: 280
+      endInstruction: 279
+      startSourceChar: 612
+      endSourceChar: 612
+      line: 25
       lineChar: 52
+      spanCodeSection: 
+    - startInstruction: 280
+      endInstruction: 279
+      startSourceChar: 612
+      endSourceChar: 623
+      line: 25
+      lineChar: 52
+      spanCodeSection: Quaternion.
+    - startInstruction: 280
+      endInstruction: 319
+      startSourceChar: 623
+      endSourceChar: 644
+      line: 25
+      lineChar: 63
+      spanCodeSection: "identity;\r\n\r\n        "
+    - startInstruction: 320
+      endInstruction: 319
+      startSourceChar: 644
+      endSourceChar: 644
+      line: 27
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 320
+      endInstruction: 319
+      startSourceChar: 644
+      endSourceChar: 644
+      line: 27
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 320
+      endInstruction: 319
+      startSourceChar: 644
+      endSourceChar: 644
+      line: 27
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 320
+      endInstruction: 319
+      startSourceChar: 644
+      endSourceChar: 655
+      line: 27
+      lineChar: 8
+      spanCodeSection: _rideWatch.
+    - startInstruction: 320
+      endInstruction: 343
+      startSourceChar: 655
+      endSourceChar: 678
+      line: 27
+      lineChar: 19
+      spanCodeSection: "ResetState();\r\n        "
+    - startInstruction: 344
+      endInstruction: 343
+      startSourceChar: 678
+      endSourceChar: 678
+      line: 28
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 344
+      endInstruction: 343
+      startSourceChar: 678
+      endSourceChar: 678
+      line: 28
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 344
+      endInstruction: 343
+      startSourceChar: 678
+      endSourceChar: 678
+      line: 28
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 344
+      endInstruction: 343
+      startSourceChar: 678
+      endSourceChar: 678
+      line: 28
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 344
+      endInstruction: 343
+      startSourceChar: 678
+      endSourceChar: 678
+      line: 28
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 344
+      endInstruction: 343
+      startSourceChar: 678
+      endSourceChar: 689
+      line: 28
+      lineChar: 8
+      spanCodeSection: _rideWatch.
+    - startInstruction: 344
+      endInstruction: 343
+      startSourceChar: 689
+      endSourceChar: 700
+      line: 28
+      lineChar: 19
+      spanCodeSection: gameObject.
+    - startInstruction: 344
+      endInstruction: 367
+      startSourceChar: 700
+      endSourceChar: 710
+      line: 28
+      lineChar: 30
+      spanCodeSection: transform.
+    - startInstruction: 368
+      endInstruction: 391
+      startSourceChar: 710
+      endSourceChar: 721
+      line: 28
+      lineChar: 40
+      spanCodeSection: 'position = '
+    - startInstruction: 392
+      endInstruction: 391
+      startSourceChar: 721
+      endSourceChar: 725
+      line: 28
+      lineChar: 51
+      spanCodeSection: 'new '
+    - startInstruction: 392
+      endInstruction: 391
+      startSourceChar: 725
+      endSourceChar: 733
+      line: 28
+      lineChar: 55
+      spanCodeSection: Vector3(
+    - startInstruction: 392
+      endInstruction: 391
+      startSourceChar: 733
+      endSourceChar: 733
+      line: 28
+      lineChar: 63
+      spanCodeSection: 
+    - startInstruction: 392
+      endInstruction: 391
+      startSourceChar: 733
+      endSourceChar: 739
+      line: 28
+      lineChar: 63
+      spanCodeSection: '0.2f, '
+    - startInstruction: 392
+      endInstruction: 391
+      startSourceChar: 739
+      endSourceChar: 739
+      line: 28
+      lineChar: 69
+      spanCodeSection: 
+    - startInstruction: 392
+      endInstruction: 391
+      startSourceChar: 739
+      endSourceChar: 746
+      line: 28
+      lineChar: 69
+      spanCodeSection: '0.05f, '
+    - startInstruction: 392
+      endInstruction: 391
+      startSourceChar: 746
+      endSourceChar: 746
+      line: 28
+      lineChar: 76
+      spanCodeSection: 
+    - startInstruction: 392
+      endInstruction: 455
+      startSourceChar: 746
+      endSourceChar: 760
+      line: 28
+      lineChar: 76
+      spanCodeSection: "0f);\r\n        "
+    - startInstruction: 456
+      endInstruction: 455
+      startSourceChar: 760
+      endSourceChar: 760
+      line: 29
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 456
+      endInstruction: 455
+      startSourceChar: 760
+      endSourceChar: 760
+      line: 29
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 456
+      endInstruction: 455
+      startSourceChar: 760
+      endSourceChar: 760
+      line: 29
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 456
+      endInstruction: 455
+      startSourceChar: 760
+      endSourceChar: 760
+      line: 29
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 456
+      endInstruction: 455
+      startSourceChar: 760
+      endSourceChar: 760
+      line: 29
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 456
+      endInstruction: 455
+      startSourceChar: 760
+      endSourceChar: 771
+      line: 29
+      lineChar: 8
+      spanCodeSection: _rideWatch.
+    - startInstruction: 456
+      endInstruction: 455
+      startSourceChar: 771
+      endSourceChar: 782
+      line: 29
+      lineChar: 19
+      spanCodeSection: gameObject.
+    - startInstruction: 456
+      endInstruction: 479
+      startSourceChar: 782
+      endSourceChar: 792
+      line: 29
+      lineChar: 30
+      spanCodeSection: transform.
+    - startInstruction: 480
+      endInstruction: 503
+      startSourceChar: 792
+      endSourceChar: 803
+      line: 29
+      lineChar: 40
+      spanCodeSection: 'rotation = '
+    - startInstruction: 504
+      endInstruction: 503
+      startSourceChar: 803
+      endSourceChar: 803
+      line: 29
+      lineChar: 51
+      spanCodeSection: 
+    - startInstruction: 504
+      endInstruction: 503
+      startSourceChar: 803
+      endSourceChar: 814
+      line: 29
+      lineChar: 51
+      spanCodeSection: Quaternion.
+    - startInstruction: 504
+      endInstruction: 504
+      startSourceChar: 814
+      endSourceChar: 814
+      line: 29
+      lineChar: 62
       spanCodeSection: 
   hasInteractEvent: 1
   serializationData:
@@ -668,6 +867,7 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 11500000, guid: 7b716a303a98fba48bdfefd3d6434a3f, type: 3}
+    - {fileID: 11500000, guid: 9e95fbed9d501ba49b780c5130472860, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -686,13 +886,13 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 2
     - Name: 
       Entry: 7
       Data: 
     - Name: $k
       Entry: 1
-      Data: _initialPosition
+      Data: _zikuDriver
     - Name: $v
       Entry: 7
       Data: 2|UdonSharp.FieldDefinition, UdonSharp.Editor
@@ -702,132 +902,6 @@ MonoBehaviour:
     - Name: internalType
       Entry: 7
       Data: 4|System.RuntimeType, mscorlib
-    - Name: 
-      Entry: 1
-      Data: UnityEngine.Vector3, UnityEngine.CoreModule
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: declarationType
-      Entry: 3
-      Data: 2
-    - Name: syncMode
-      Entry: 3
-      Data: 0
-    - Name: symbolResolvedTypeName
-      Entry: 1
-      Data: UnityEngineVector3
-    - Name: symbolOriginalName
-      Entry: 1
-      Data: _initialPosition
-    - Name: symbolUniqueName
-      Entry: 1
-      Data: _initialPosition
-    - Name: symbolDefaultValue
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: fieldAttributes
-      Entry: 7
-      Data: 5|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: userBehaviourSource
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 1
-      Data: _initialRotation
-    - Name: $v
-      Entry: 7
-      Data: 6|UdonSharp.FieldDefinition, UdonSharp.Editor
-    - Name: fieldSymbol
-      Entry: 7
-      Data: 7|UdonSharp.SymbolDefinition, UdonSharp.Editor
-    - Name: internalType
-      Entry: 7
-      Data: 8|System.RuntimeType, mscorlib
-    - Name: 
-      Entry: 1
-      Data: UnityEngine.Quaternion, UnityEngine.CoreModule
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: declarationType
-      Entry: 3
-      Data: 2
-    - Name: syncMode
-      Entry: 3
-      Data: 0
-    - Name: symbolResolvedTypeName
-      Entry: 1
-      Data: UnityEngineQuaternion
-    - Name: symbolOriginalName
-      Entry: 1
-      Data: _initialRotation
-    - Name: symbolUniqueName
-      Entry: 1
-      Data: _initialRotation
-    - Name: symbolDefaultValue
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: fieldAttributes
-      Entry: 7
-      Data: 9|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: userBehaviourSource
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 1
-      Data: _zikuDriver
-    - Name: $v
-      Entry: 7
-      Data: 10|UdonSharp.FieldDefinition, UdonSharp.Editor
-    - Name: fieldSymbol
-      Entry: 7
-      Data: 11|UdonSharp.SymbolDefinition, UdonSharp.Editor
-    - Name: internalType
-      Entry: 7
-      Data: 12|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: ZikuDriver, Assembly-CSharp
@@ -857,13 +931,13 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 13|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 5|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 14|UnityEngine.SerializeField, UnityEngine.CoreModule
+      Data: 6|UnityEngine.SerializeField, UnityEngine.CoreModule
     - Name: 
       Entry: 8
       Data: 
@@ -876,6 +950,75 @@ MonoBehaviour:
     - Name: userBehaviourSource
       Entry: 10
       Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: _rideWatch
+    - Name: $v
+      Entry: 7
+      Data: 7|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 8|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 9|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: RideWatch, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: VRCUdonUdonBehaviour
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: _rideWatch
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: _rideWatch
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 10|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 11|UnityEngine.SerializeField, UnityEngine.CoreModule
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 10
+      Data: 1
     - Name: 
       Entry: 8
       Data: 

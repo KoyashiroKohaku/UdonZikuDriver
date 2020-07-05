@@ -35,8 +35,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - ZikuDriver
+  - RideWatch
   m_SortingLayers:
   - name: Default
     uniqueID: 0

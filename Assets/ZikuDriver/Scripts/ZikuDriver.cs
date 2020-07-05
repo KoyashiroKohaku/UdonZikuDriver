@@ -25,6 +25,54 @@ public class ZikuDriver : UdonSharpBehaviour
     [SerializeField]
     private Text _text;
 
+    [SerializeField]
+    private Transform _lSlot;
+
+    [SerializeField]
+    private Transform _rSlot;
+
+    #region Properties (with WriteLog)
+    public int GetState()
+    {
+        return _state;
+    }
+
+    public void SetState(int value)
+    {
+        WriteLog(nameof(_state), _state + "=>" + value, 2);
+
+        _state = value;
+    }
+
+    public Vector3 GetPositionOffset()
+    {
+        return _positionOffset;
+    }
+
+    public void SetPositionOffset(Vector3 offset)
+    {
+        WriteLog(nameof(offset.x), offset.x.ToString(), 2);
+        WriteLog(nameof(offset.y), offset.y.ToString(), 2);
+        WriteLog(nameof(offset.z), offset.z.ToString(), 2);
+
+        _positionOffset = offset;
+    }
+
+    public Quaternion GetRotationOffset()
+    {
+        return _rotationOffset;
+    }
+
+    public void SetRotationOffset(Quaternion offset)
+    {
+        WriteLog(nameof(offset.x), offset.x.ToString(), 2);
+        WriteLog(nameof(offset.y), offset.y.ToString(), 2);
+        WriteLog(nameof(offset.z), offset.z.ToString(), 2);
+
+        _rotationOffset = offset;
+    }
+    #endregion
+
     #region Events
     private void Start()
     {
@@ -43,8 +91,8 @@ public class ZikuDriver : UdonSharpBehaviour
             var chestPosition = _rider.GetBonePosition(HumanBodyBones.Chest);
             var chestRotation = _rider.GetBoneRotation(HumanBodyBones.Chest);
 
-            transform.position = chestPosition + chestRotation * _positionOffset;
-            transform.rotation = chestRotation * _rotationOffset;
+            transform.position = chestPosition + chestRotation * GetPositionOffset();
+            transform.rotation = chestRotation * GetRotationOffset();
         }
     }
 
@@ -55,15 +103,34 @@ public class ZikuDriver : UdonSharpBehaviour
 
     public override void OnPickupUseDown()
     {
-        switch (_state)
+        switch (GetState())
         {
             case 0:
-                SendCustomNetworkEvent(NetworkEventTarget.All, nameof(LunchZikuDriver));
+                SendCustomNetworkEvent(NetworkEventTarget.All, nameof(Lunch));
                 break;
             case 1:
-                SendCustomNetworkEvent(NetworkEventTarget.All, nameof(EquipZikuDriver));
+                SendCustomNetworkEvent(NetworkEventTarget.All, nameof(Equip));
                 break;
         }
+    }
+
+    private void OnTriggerEnter(Collider collider)
+    {
+        var rideWatchTransform = collider.transform;
+
+        if ((transform.position - rideWatchTransform.position).x > 0)
+        {
+            rideWatchTransform.SetParent(_rSlot);
+        }
+        else
+        {
+            rideWatchTransform.SetParent(_lSlot);
+        }
+
+        rideWatchTransform.localPosition = Vector3.zero;
+        rideWatchTransform.localRotation = Quaternion.identity;
+
+        ((VRC_Pickup)rideWatchTransform.GetComponent(typeof(VRC_Pickup))).Drop();
     }
     #endregion
 
@@ -102,19 +169,19 @@ public class ZikuDriver : UdonSharpBehaviour
         PlayPickUpSound();
     }
 
-    public void LunchZikuDriver()
+    public void Lunch()
     {
-        WriteLog("call", nameof(LunchZikuDriver), 2);
+        WriteLog("call", nameof(Lunch), 2);
 
         PlayLaunchSound();
 
         SetState(1);
-        _animator.Play(nameof(LunchZikuDriver));
+        _animator.Play(nameof(Lunch));
     }
 
-    public void EquipZikuDriver()
+    public void Equip()
     {
-        WriteLog("call", nameof(EquipZikuDriver), 2);
+        WriteLog("call", nameof(Equip), 2);
 
         SetState(2);
         _isEquipped = true;
@@ -129,36 +196,19 @@ public class ZikuDriver : UdonSharpBehaviour
         SetPositionOffset(zikuDriverPosition - chestPosition);
         SetRotationOffset(zikuDriverRotation * Quaternion.Inverse(chestRotation));
 
-        _animator.Play(nameof(EquipZikuDriver));
+        _animator.Play(nameof(Equip));
         PlayEquipSound();
         _vrcPickup.Drop();
     }
-    #endregion
 
-    #region Setter (with WriteLog)
-    private void SetState(int value)
+    public void DetachLSlot()
     {
-        WriteLog(nameof(_state), _state + "=>" + value, 2);
-
-        _state = value;
+        _lSlot.transform.DetachChildren();
     }
 
-    private void SetPositionOffset(Vector3 offset)
+    public void DetachRSlot()
     {
-        WriteLog(nameof(offset.x), offset.x.ToString(), 2);
-        WriteLog(nameof(offset.y), offset.y.ToString(), 2);
-        WriteLog(nameof(offset.z), offset.z.ToString(), 2);
-
-        _positionOffset = offset;
-    }
-
-    private void SetRotationOffset(Quaternion offset)
-    {
-        WriteLog(nameof(offset.x), offset.x.ToString(), 2);
-        WriteLog(nameof(offset.y), offset.y.ToString(), 2);
-        WriteLog(nameof(offset.z), offset.z.ToString(), 2);
-
-        _rotationOffset = offset;
+        _rSlot.transform.DetachChildren();
     }
     #endregion
 

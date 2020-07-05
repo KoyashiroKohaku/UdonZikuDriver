@@ -4,16 +4,14 @@ using VRC.Udon.Common.Interfaces;
 
 public class ResetButton : UdonSharpBehaviour
 {
-    private Vector3 _initialPosition;
-    private Quaternion _initialRotation;
-
     [SerializeField]
     private ZikuDriver _zikuDriver;
 
+    [SerializeField]
+    private RideWatch _rideWatch;
+
     private void Start()
     {
-        _initialPosition = new Vector3(0f, 0.05f, 0f);
-        _initialRotation = Quaternion.identity;
     }
 
     public override void Interact()
@@ -24,7 +22,11 @@ public class ResetButton : UdonSharpBehaviour
     public void Reset()
     {
         _zikuDriver.ResetState();
-        _zikuDriver.gameObject.transform.position = _initialPosition;
-        _zikuDriver.gameObject.transform.rotation = _initialRotation;
+        _zikuDriver.gameObject.transform.position = new Vector3(0f, 0.05f, 0f);
+        _zikuDriver.gameObject.transform.rotation = Quaternion.identity;
+
+        _rideWatch.ResetState();
+        _rideWatch.gameObject.transform.position = new Vector3(0.2f, 0.05f, 0f);
+        _rideWatch.gameObject.transform.rotation = Quaternion.identity;
     }
 }
