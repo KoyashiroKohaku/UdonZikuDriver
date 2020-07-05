@@ -1,8 +1,5 @@
-using System;
-using System.Linq;
 using UdonSharp;
 using UnityEngine;
-using UnityEngine.Assertions.Must;
 using UnityEngine.UI;
 using VRC.SDKBase;
 using VRC.Udon.Common.Interfaces;
@@ -12,14 +9,18 @@ public class ZikuDriver : UdonSharpBehaviour
     private readonly string _parameterName = "State";
     private Animator _animator;
     private VRC_Pickup _vrcPickup;
+    private AudioSource _pickUpSound;
+    private AudioSource _lunchSound;
+    private AudioSource _equipSound;
+
     private bool _isEquipped = false;
     private VRCPlayerApi _rider;
     private int _state = 0;
-    private float _offsetY;
-    private float _offsetZ;
+    private Vector3 _positionOffset = Vector3.zero;
+    private Quaternion _rotationOffset = Quaternion.identity;
 
     [SerializeField]
-    private bool _isDebug = false;
+    private int _debugLevel = 0;
 
     [SerializeField]
     private Text _text;
@@ -29,6 +30,10 @@ public class ZikuDriver : UdonSharpBehaviour
     {
         _animator = GetComponent<Animator>();
         _vrcPickup = (VRC_Pickup)GetComponent(typeof(VRC_Pickup));
+        var audioSources = transform.GetComponentsInChildren<AudioSource>();
+        _pickUpSound = audioSources[0];
+        _lunchSound = audioSources[1];
+        _equipSound = audioSources[2];
     }
 
     private void Update()
@@ -38,57 +43,78 @@ public class ZikuDriver : UdonSharpBehaviour
             var chestPosition = _rider.GetBonePosition(HumanBodyBones.Chest);
             var chestRotation = _rider.GetBoneRotation(HumanBodyBones.Chest);
 
-            transform.position = new Vector3(chestPosition.x, chestPosition.y + _offsetY, chestPosition.z + _offsetZ);
+            transform.position = chestPosition + chestRotation * _positionOffset;
+            transform.rotation = chestRotation * _rotationOffset;
         }
     }
 
     public override void OnPickup()
     {
-        WriteLog("call", nameof(OnPickup));
-        Reset();
+        SendCustomNetworkEvent(NetworkEventTarget.All, nameof(PickUp));
     }
 
     public override void OnPickupUseDown()
     {
-        WriteLog("call", nameof(OnPickupUseDown));
-
         switch (_state)
         {
             case 0:
                 SendCustomNetworkEvent(NetworkEventTarget.All, nameof(LunchZikuDriver));
                 break;
             case 1:
-                SendCustomNetworkEvent(NetworkEventTarget.All, nameof(PutOnZikuDriver));
+                SendCustomNetworkEvent(NetworkEventTarget.All, nameof(EquipZikuDriver));
                 break;
         }
     }
     #endregion
 
-    #region Network Events
-    public void Reset()
+    #region Sounds
+    public void PlayPickUpSound()
     {
-        WriteLog("call", nameof(Reset));
+        WriteLog("call", nameof(PlayPickUpSound), 2);
+        WriteLog("audio", "ｶﾞﾁｬｯ", 1);
 
-        _isEquipped = false;
-        _rider = null;
-        SetState(0);
-        SetOffsetY(0);
-        SetOffsetZ(0);
+        _pickUpSound.Play();
+    }
+
+    public void PlayLaunchSound()
+    {
+        WriteLog("call", nameof(PlayLaunchSound), 2);
+        WriteLog("audio", "＼ｼﾞｸｳﾄﾞﾗｲﾊﾞｰ／", 1);
+
+        _lunchSound.Play();
+    }
+
+    public void PlayEquipSound()
+    {
+        WriteLog("call", nameof(PlayEquipSound), 2);
+        WriteLog("audio", "（装着音）", 1);
+
+        _equipSound.Play();
+    }
+    #endregion
+
+    #region Network Events
+    public void PickUp()
+    {
+        WriteLog("call", nameof(PickUp), 2);
+
+        ResetState();
+        PlayPickUpSound();
     }
 
     public void LunchZikuDriver()
     {
-        WriteLog("call", nameof(LunchZikuDriver));
+        WriteLog("call", nameof(LunchZikuDriver), 2);
 
-        WriteLog("audio", "＼ｼﾞｸｳﾄﾞﾗｲﾊﾞｰ／");
+        PlayLaunchSound();
 
         SetState(1);
         _animator.Play(nameof(LunchZikuDriver));
     }
 
-    public void PutOnZikuDriver()
+    public void EquipZikuDriver()
     {
-        WriteLog("call", nameof(PutOnZikuDriver));
+        WriteLog("call", nameof(EquipZikuDriver), 2);
 
         SetState(2);
         _isEquipped = true;
@@ -100,12 +126,11 @@ public class ZikuDriver : UdonSharpBehaviour
         var zikuDriverPosition = transform.position;
         var zikuDriverRotation = transform.rotation;
 
-        var offset = chestRotation * (chestPosition - zikuDriverPosition);
+        SetPositionOffset(zikuDriverPosition - chestPosition);
+        SetRotationOffset(zikuDriverRotation * Quaternion.Inverse(chestRotation));
 
-        SetOffsetY(offset.y);
-        SetOffsetZ(offset.z);
-
-        _animator.Play(nameof(PutOnZikuDriver));
+        _animator.Play(nameof(EquipZikuDriver));
+        PlayEquipSound();
         _vrcPickup.Drop();
     }
     #endregion
@@ -113,27 +138,44 @@ public class ZikuDriver : UdonSharpBehaviour
     #region Setter (with WriteLog)
     private void SetState(int value)
     {
-        WriteLog(nameof(_state), _state + "=>" + value);
+        WriteLog(nameof(_state), _state + "=>" + value, 2);
+
         _state = value;
     }
 
-    private void SetOffsetY(float value)
+    private void SetPositionOffset(Vector3 offset)
     {
-        WriteLog(nameof(_offsetZ), _offsetY + "=>" + value);
-        _offsetY = value;
+        WriteLog(nameof(offset.x), offset.x.ToString(), 2);
+        WriteLog(nameof(offset.y), offset.y.ToString(), 2);
+        WriteLog(nameof(offset.z), offset.z.ToString(), 2);
+
+        _positionOffset = offset;
     }
 
-    private void SetOffsetZ(float value)
+    private void SetRotationOffset(Quaternion offset)
     {
-        WriteLog(nameof(_offsetZ), _offsetZ + "=>" + value);
-        _offsetZ = value;
+        WriteLog(nameof(offset.x), offset.x.ToString(), 2);
+        WriteLog(nameof(offset.y), offset.y.ToString(), 2);
+        WriteLog(nameof(offset.z), offset.z.ToString(), 2);
+
+        _rotationOffset = offset;
     }
     #endregion
 
     #region Utilities
-    private void WriteLog(string type, string message)
+    public void ResetState()
     {
-        if (_isDebug)
+        WriteLog("call", nameof(ResetState), 2);
+
+        _isEquipped = false;
+        _rider = null;
+        SetState(0);
+        SetPositionOffset(Vector3.zero);
+    }
+
+    private void WriteLog(string type, string message, int debugLevel)
+    {
+        if (_debugLevel >= debugLevel)
         {
             var lines = _text.text.Split('\n');
 
