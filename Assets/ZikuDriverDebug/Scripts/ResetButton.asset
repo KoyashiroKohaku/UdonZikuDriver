@@ -22,23 +22,25 @@ MonoBehaviour:
     null\r\n    __0_const_intnl_SystemSingle: %SystemSingle, null\r\n    __1_const_intnl_SystemSingle:
     %SystemSingle, null\r\n    __2_const_intnl_SystemSingle: %SystemSingle, null\r\n
     \   __0_const_intnl_SystemString: %SystemString, null\r\n    __1_const_intnl_SystemString:
-    %SystemString, null\r\n    __0_const_intnl_SystemUInt32: %SystemUInt32, null\r\n
-    \   __0_intnl_UnityEngineGameObject: %UnityEngineGameObject, null\r\n    __1_intnl_UnityEngineGameObject:
-    %UnityEngineGameObject, null\r\n    __2_intnl_UnityEngineGameObject: %UnityEngineGameObject,
-    null\r\n    __3_intnl_UnityEngineGameObject: %UnityEngineGameObject, null\r\n
-    \   __0_intnl_UnityEngineQuaternion: %UnityEngineQuaternion, null\r\n    __1_intnl_UnityEngineQuaternion:
-    %UnityEngineQuaternion, null\r\n    __0_intnl_UnityEngineTransform: %UnityEngineTransform,
-    null\r\n    __1_intnl_UnityEngineTransform: %UnityEngineTransform, null\r\n    __2_intnl_UnityEngineTransform:
-    %UnityEngineTransform, null\r\n    __3_intnl_UnityEngineTransform: %UnityEngineTransform,
-    null\r\n    __0_intnl_returnTarget_UInt32: %SystemUInt32, null\r\n    __0_intnl_UnityEngineVector3:
-    %UnityEngineVector3, null\r\n    __1_intnl_UnityEngineVector3: %UnityEngineVector3,
-    null\r\n\r\n.data_end\r\n\r\n        \r\n         # using UdonSharp;\r\n        \r\n
-    \        # using UnityEngine;\r\n        \r\n         # using VRC.Udon.Common.Interfaces;\r\n
-    \       \r\n         # public class ResetButton : UdonSharpBehaviour\r\n.code_start\r\n
-    \       \r\n         # [SerializeField]\r\n        \r\n         # private ZikuDriver
-    _zikuDriver;\r\n        \r\n         # [SerializeField]\r\n        \r\n         #
-    private RideWatch _rideWatch;\r\n        \r\n         # private void Start()\r\n
-    \   .export _start\r\n        \r\n    _start:\r\n        \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n
+    %SystemString, null\r\n    __2_const_intnl_SystemString: %SystemString, null\r\n
+    \   __3_const_intnl_SystemString: %SystemString, null\r\n    __0_const_intnl_SystemUInt32:
+    %SystemUInt32, null\r\n    __0_intnl_UnityEngineGameObject: %UnityEngineGameObject,
+    null\r\n    __1_intnl_UnityEngineGameObject: %UnityEngineGameObject, null\r\n
+    \   __2_intnl_UnityEngineGameObject: %UnityEngineGameObject, null\r\n    __3_intnl_UnityEngineGameObject:
+    %UnityEngineGameObject, null\r\n    __0_intnl_UnityEngineQuaternion: %UnityEngineQuaternion,
+    null\r\n    __1_intnl_UnityEngineQuaternion: %UnityEngineQuaternion, null\r\n
+    \   __0_intnl_UnityEngineTransform: %UnityEngineTransform, null\r\n    __1_intnl_UnityEngineTransform:
+    %UnityEngineTransform, null\r\n    __2_intnl_UnityEngineTransform: %UnityEngineTransform,
+    null\r\n    __3_intnl_UnityEngineTransform: %UnityEngineTransform, null\r\n    __0_intnl_returnTarget_UInt32:
+    %SystemUInt32, null\r\n    __0_intnl_UnityEngineVector3: %UnityEngineVector3,
+    null\r\n    __1_intnl_UnityEngineVector3: %UnityEngineVector3, null\r\n\r\n.data_end\r\n\r\n
+    \       \r\n         # using UdonSharp;\r\n        \r\n         # using UnityEngine;\r\n
+    \       \r\n         # using VRC.Udon.Common.Interfaces;\r\n        \r\n         #
+    public class ResetButton : UdonSharpBehaviour\r\n.code_start\r\n        \r\n         #
+    [SerializeField]\r\n        \r\n         # private ZikuDriver _zikuDriver;\r\n
+    \       \r\n         # [SerializeField]\r\n        \r\n         # private RideWatch
+    _rideWatch;\r\n        \r\n         # private void Start()\r\n    .export _start\r\n
+    \       \r\n    _start:\r\n        \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n
     \       \r\n         # {\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
     epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
     \       \r\n        \r\n         # public override void Interact()\r\n    .export
@@ -70,6 +72,10 @@ MonoBehaviour:
     \       PUSH, __0_intnl_UnityEngineQuaternion\r\n        EXTERN, \"UnityEngineQuaternion.__get_identity__UnityEngineQuaternion\"\r\n
     \       PUSH, __1_intnl_UnityEngineTransform\r\n        PUSH, __0_intnl_UnityEngineQuaternion\r\n
     \       EXTERN, \"UnityEngineTransform.__set_rotation__UnityEngineQuaternion__SystemVoid\"\r\n
+    \       \r\n         # _zikuDriver.DetachLSlot();\r\n        PUSH, _zikuDriver\r\n
+    \       PUSH, __2_const_intnl_SystemString\r\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomEvent__SystemString__SystemVoid\"\r\n
+    \       \r\n         # _zikuDriver.DetachRSlot();\r\n        PUSH, _zikuDriver\r\n
+    \       PUSH, __3_const_intnl_SystemString\r\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomEvent__SystemString__SystemVoid\"\r\n
     \       \r\n         # _rideWatch.ResetState();\r\n        PUSH, _rideWatch\r\n
     \       PUSH, __1_const_intnl_SystemString\r\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomEvent__SystemString__SystemVoid\"\r\n
     \       \r\n         # _rideWatch.gameObject.transform.position = new Vector3(0.2f,
@@ -619,246 +625,316 @@ MonoBehaviour:
     - startInstruction: 280
       endInstruction: 319
       startSourceChar: 623
-      endSourceChar: 644
+      endSourceChar: 642
       line: 25
       lineChar: 63
-      spanCodeSection: "identity;\r\n\r\n        "
+      spanCodeSection: "identity;\r\n        "
     - startInstruction: 320
       endInstruction: 319
-      startSourceChar: 644
-      endSourceChar: 644
-      line: 27
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 320
-      endInstruction: 319
-      startSourceChar: 644
-      endSourceChar: 644
-      line: 27
+      startSourceChar: 642
+      endSourceChar: 642
+      line: 26
       lineChar: 8
       spanCodeSection: 
     - startInstruction: 320
       endInstruction: 319
-      startSourceChar: 644
-      endSourceChar: 644
-      line: 27
+      startSourceChar: 642
+      endSourceChar: 642
+      line: 26
       lineChar: 8
       spanCodeSection: 
     - startInstruction: 320
       endInstruction: 319
-      startSourceChar: 644
-      endSourceChar: 655
-      line: 27
+      startSourceChar: 642
+      endSourceChar: 642
+      line: 26
       lineChar: 8
-      spanCodeSection: _rideWatch.
+      spanCodeSection: 
+    - startInstruction: 320
+      endInstruction: 319
+      startSourceChar: 642
+      endSourceChar: 654
+      line: 26
+      lineChar: 8
+      spanCodeSection: _zikuDriver.
     - startInstruction: 320
       endInstruction: 343
-      startSourceChar: 655
+      startSourceChar: 654
+      endSourceChar: 678
+      line: 26
+      lineChar: 20
+      spanCodeSection: "DetachLSlot();\r\n        "
+    - startInstruction: 344
+      endInstruction: 343
+      startSourceChar: 678
       endSourceChar: 678
       line: 27
-      lineChar: 19
-      spanCodeSection: "ResetState();\r\n        "
-    - startInstruction: 344
-      endInstruction: 343
-      startSourceChar: 678
-      endSourceChar: 678
-      line: 28
       lineChar: 8
       spanCodeSection: 
     - startInstruction: 344
       endInstruction: 343
       startSourceChar: 678
       endSourceChar: 678
-      line: 28
+      line: 27
       lineChar: 8
       spanCodeSection: 
     - startInstruction: 344
       endInstruction: 343
       startSourceChar: 678
       endSourceChar: 678
-      line: 28
+      line: 27
       lineChar: 8
       spanCodeSection: 
     - startInstruction: 344
       endInstruction: 343
       startSourceChar: 678
-      endSourceChar: 678
-      line: 28
+      endSourceChar: 690
+      line: 27
       lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 344
-      endInstruction: 343
-      startSourceChar: 678
-      endSourceChar: 678
-      line: 28
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 344
-      endInstruction: 343
-      startSourceChar: 678
-      endSourceChar: 689
-      line: 28
-      lineChar: 8
-      spanCodeSection: _rideWatch.
-    - startInstruction: 344
-      endInstruction: 343
-      startSourceChar: 689
-      endSourceChar: 700
-      line: 28
-      lineChar: 19
-      spanCodeSection: gameObject.
+      spanCodeSection: _zikuDriver.
     - startInstruction: 344
       endInstruction: 367
-      startSourceChar: 700
-      endSourceChar: 710
-      line: 28
-      lineChar: 30
-      spanCodeSection: transform.
+      startSourceChar: 690
+      endSourceChar: 716
+      line: 27
+      lineChar: 20
+      spanCodeSection: "DetachRSlot();\r\n\r\n        "
     - startInstruction: 368
-      endInstruction: 391
-      startSourceChar: 710
-      endSourceChar: 721
-      line: 28
-      lineChar: 40
-      spanCodeSection: 'position = '
-    - startInstruction: 392
-      endInstruction: 391
-      startSourceChar: 721
-      endSourceChar: 725
-      line: 28
-      lineChar: 51
-      spanCodeSection: 'new '
-    - startInstruction: 392
-      endInstruction: 391
-      startSourceChar: 725
-      endSourceChar: 733
-      line: 28
-      lineChar: 55
-      spanCodeSection: Vector3(
-    - startInstruction: 392
-      endInstruction: 391
-      startSourceChar: 733
-      endSourceChar: 733
-      line: 28
-      lineChar: 63
-      spanCodeSection: 
-    - startInstruction: 392
-      endInstruction: 391
-      startSourceChar: 733
-      endSourceChar: 739
-      line: 28
-      lineChar: 63
-      spanCodeSection: '0.2f, '
-    - startInstruction: 392
-      endInstruction: 391
-      startSourceChar: 739
-      endSourceChar: 739
-      line: 28
-      lineChar: 69
-      spanCodeSection: 
-    - startInstruction: 392
-      endInstruction: 391
-      startSourceChar: 739
-      endSourceChar: 746
-      line: 28
-      lineChar: 69
-      spanCodeSection: '0.05f, '
-    - startInstruction: 392
-      endInstruction: 391
-      startSourceChar: 746
-      endSourceChar: 746
-      line: 28
-      lineChar: 76
-      spanCodeSection: 
-    - startInstruction: 392
-      endInstruction: 455
-      startSourceChar: 746
-      endSourceChar: 760
-      line: 28
-      lineChar: 76
-      spanCodeSection: "0f);\r\n        "
-    - startInstruction: 456
-      endInstruction: 455
-      startSourceChar: 760
-      endSourceChar: 760
+      endInstruction: 367
+      startSourceChar: 716
+      endSourceChar: 716
       line: 29
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 456
-      endInstruction: 455
-      startSourceChar: 760
-      endSourceChar: 760
+    - startInstruction: 368
+      endInstruction: 367
+      startSourceChar: 716
+      endSourceChar: 716
       line: 29
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 456
-      endInstruction: 455
-      startSourceChar: 760
-      endSourceChar: 760
+    - startInstruction: 368
+      endInstruction: 367
+      startSourceChar: 716
+      endSourceChar: 716
       line: 29
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 456
-      endInstruction: 455
-      startSourceChar: 760
-      endSourceChar: 760
-      line: 29
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 456
-      endInstruction: 455
-      startSourceChar: 760
-      endSourceChar: 760
-      line: 29
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 456
-      endInstruction: 455
-      startSourceChar: 760
-      endSourceChar: 771
+    - startInstruction: 368
+      endInstruction: 367
+      startSourceChar: 716
+      endSourceChar: 727
       line: 29
       lineChar: 8
       spanCodeSection: _rideWatch.
-    - startInstruction: 456
-      endInstruction: 455
-      startSourceChar: 771
-      endSourceChar: 782
+    - startInstruction: 368
+      endInstruction: 391
+      startSourceChar: 727
+      endSourceChar: 750
       line: 29
       lineChar: 19
+      spanCodeSection: "ResetState();\r\n        "
+    - startInstruction: 392
+      endInstruction: 391
+      startSourceChar: 750
+      endSourceChar: 750
+      line: 30
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 392
+      endInstruction: 391
+      startSourceChar: 750
+      endSourceChar: 750
+      line: 30
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 392
+      endInstruction: 391
+      startSourceChar: 750
+      endSourceChar: 750
+      line: 30
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 392
+      endInstruction: 391
+      startSourceChar: 750
+      endSourceChar: 750
+      line: 30
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 392
+      endInstruction: 391
+      startSourceChar: 750
+      endSourceChar: 750
+      line: 30
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 392
+      endInstruction: 391
+      startSourceChar: 750
+      endSourceChar: 761
+      line: 30
+      lineChar: 8
+      spanCodeSection: _rideWatch.
+    - startInstruction: 392
+      endInstruction: 391
+      startSourceChar: 761
+      endSourceChar: 772
+      line: 30
+      lineChar: 19
       spanCodeSection: gameObject.
-    - startInstruction: 456
-      endInstruction: 479
-      startSourceChar: 782
-      endSourceChar: 792
-      line: 29
+    - startInstruction: 392
+      endInstruction: 415
+      startSourceChar: 772
+      endSourceChar: 782
+      line: 30
       lineChar: 30
       spanCodeSection: transform.
-    - startInstruction: 480
-      endInstruction: 503
-      startSourceChar: 792
-      endSourceChar: 803
-      line: 29
+    - startInstruction: 416
+      endInstruction: 439
+      startSourceChar: 782
+      endSourceChar: 793
+      line: 30
       lineChar: 40
-      spanCodeSection: 'rotation = '
+      spanCodeSection: 'position = '
+    - startInstruction: 440
+      endInstruction: 439
+      startSourceChar: 793
+      endSourceChar: 797
+      line: 30
+      lineChar: 51
+      spanCodeSection: 'new '
+    - startInstruction: 440
+      endInstruction: 439
+      startSourceChar: 797
+      endSourceChar: 805
+      line: 30
+      lineChar: 55
+      spanCodeSection: Vector3(
+    - startInstruction: 440
+      endInstruction: 439
+      startSourceChar: 805
+      endSourceChar: 805
+      line: 30
+      lineChar: 63
+      spanCodeSection: 
+    - startInstruction: 440
+      endInstruction: 439
+      startSourceChar: 805
+      endSourceChar: 811
+      line: 30
+      lineChar: 63
+      spanCodeSection: '0.2f, '
+    - startInstruction: 440
+      endInstruction: 439
+      startSourceChar: 811
+      endSourceChar: 811
+      line: 30
+      lineChar: 69
+      spanCodeSection: 
+    - startInstruction: 440
+      endInstruction: 439
+      startSourceChar: 811
+      endSourceChar: 818
+      line: 30
+      lineChar: 69
+      spanCodeSection: '0.05f, '
+    - startInstruction: 440
+      endInstruction: 439
+      startSourceChar: 818
+      endSourceChar: 818
+      line: 30
+      lineChar: 76
+      spanCodeSection: 
+    - startInstruction: 440
+      endInstruction: 503
+      startSourceChar: 818
+      endSourceChar: 832
+      line: 30
+      lineChar: 76
+      spanCodeSection: "0f);\r\n        "
     - startInstruction: 504
       endInstruction: 503
-      startSourceChar: 803
-      endSourceChar: 803
-      line: 29
-      lineChar: 51
+      startSourceChar: 832
+      endSourceChar: 832
+      line: 31
+      lineChar: 8
       spanCodeSection: 
     - startInstruction: 504
       endInstruction: 503
-      startSourceChar: 803
-      endSourceChar: 814
-      line: 29
+      startSourceChar: 832
+      endSourceChar: 832
+      line: 31
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 504
+      endInstruction: 503
+      startSourceChar: 832
+      endSourceChar: 832
+      line: 31
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 504
+      endInstruction: 503
+      startSourceChar: 832
+      endSourceChar: 832
+      line: 31
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 504
+      endInstruction: 503
+      startSourceChar: 832
+      endSourceChar: 832
+      line: 31
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 504
+      endInstruction: 503
+      startSourceChar: 832
+      endSourceChar: 843
+      line: 31
+      lineChar: 8
+      spanCodeSection: _rideWatch.
+    - startInstruction: 504
+      endInstruction: 503
+      startSourceChar: 843
+      endSourceChar: 854
+      line: 31
+      lineChar: 19
+      spanCodeSection: gameObject.
+    - startInstruction: 504
+      endInstruction: 527
+      startSourceChar: 854
+      endSourceChar: 864
+      line: 31
+      lineChar: 30
+      spanCodeSection: transform.
+    - startInstruction: 528
+      endInstruction: 551
+      startSourceChar: 864
+      endSourceChar: 875
+      line: 31
+      lineChar: 40
+      spanCodeSection: 'rotation = '
+    - startInstruction: 552
+      endInstruction: 551
+      startSourceChar: 875
+      endSourceChar: 875
+      line: 31
+      lineChar: 51
+      spanCodeSection: 
+    - startInstruction: 552
+      endInstruction: 551
+      startSourceChar: 875
+      endSourceChar: 886
+      line: 31
       lineChar: 51
       spanCodeSection: Quaternion.
-    - startInstruction: 504
-      endInstruction: 504
-      startSourceChar: 814
-      endSourceChar: 814
-      line: 29
+    - startInstruction: 552
+      endInstruction: 552
+      startSourceChar: 886
+      endSourceChar: 886
+      line: 31
       lineChar: 62
       spanCodeSection: 
   hasInteractEvent: 1

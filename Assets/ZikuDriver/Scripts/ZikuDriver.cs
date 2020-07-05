@@ -12,8 +12,11 @@ public class ZikuDriver : UdonSharpBehaviour
     private AudioSource _pickUpSound;
     private AudioSource _lunchSound;
     private AudioSource _equipSound;
+    private AudioSource _attachSound;
+    private AudioSource _standbySound;
 
     private bool _isEquipped = false;
+    private bool _isStandby = false;
     private VRCPlayerApi _rider;
     private int _state = 0;
     private Vector3 _positionOffset = Vector3.zero;
@@ -30,6 +33,9 @@ public class ZikuDriver : UdonSharpBehaviour
 
     [SerializeField]
     private Transform _rSlot;
+
+    [SerializeField]
+    private Transform[] _rideWatches;
 
     #region Properties (with WriteLog)
     public int GetState()
@@ -82,6 +88,8 @@ public class ZikuDriver : UdonSharpBehaviour
         _pickUpSound = audioSources[0];
         _lunchSound = audioSources[1];
         _equipSound = audioSources[2];
+        _attachSound = audioSources[3];
+        _standbySound = audioSources[4];
     }
 
     private void Update()
@@ -116,21 +124,15 @@ public class ZikuDriver : UdonSharpBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        var rideWatchTransform = collider.transform;
+        WriteLog("call", nameof(OnTriggerEnter), 2);
+        WriteLog("collider", collider.gameObject.name, 2);
 
-        if ((transform.position - rideWatchTransform.position).x > 0)
+        switch (collider.transform.gameObject.name)
         {
-            rideWatchTransform.SetParent(_rSlot);
+            case "ZioRideWatch":
+                SendCustomNetworkEvent(NetworkEventTarget.All, nameof(AttachZioRideWatch));
+                break;
         }
-        else
-        {
-            rideWatchTransform.SetParent(_lSlot);
-        }
-
-        rideWatchTransform.localPosition = Vector3.zero;
-        rideWatchTransform.localRotation = Quaternion.identity;
-
-        ((VRC_Pickup)rideWatchTransform.GetComponent(typeof(VRC_Pickup))).Drop();
     }
     #endregion
 
@@ -157,6 +159,24 @@ public class ZikuDriver : UdonSharpBehaviour
         WriteLog("audio", "（装着音）", 1);
 
         _equipSound.Play();
+    }
+
+    public void PlayAttachSound()
+    {
+        WriteLog("call", nameof(PlayAttachSound), 2);
+        WriteLog("audio", "（ライドウォッチセット音）", 1);
+
+        _attachSound.Play();
+    }
+
+    public void PlayStandbySound()
+    {
+        WriteLog("call", nameof(PlayStandbySound), 2);
+        WriteLog("audio", "（変身待機音）", 1);
+
+        _isStandby = true;
+
+        _standbySound.Play();
     }
     #endregion
 
@@ -201,6 +221,35 @@ public class ZikuDriver : UdonSharpBehaviour
         _vrcPickup.Drop();
     }
 
+    public void AttachZioRideWatch()
+    {
+        WriteLog("call", nameof(AttachZioRideWatch), 2);
+
+        Atach(_rideWatches[0]);
+    }
+
+    public void Atach(Transform rideWatchTransform)
+    {
+        WriteLog("call", nameof(Atach), 2);
+
+        if ((transform.position - rideWatchTransform.position).x > 0)
+        {
+            rideWatchTransform.SetParent(_rSlot);
+        }
+        else
+        {
+            rideWatchTransform.SetParent(_lSlot);
+        }
+
+        rideWatchTransform.localPosition = Vector3.zero;
+        rideWatchTransform.localRotation = Quaternion.identity;
+
+        PlayAttachSound();
+        PlayStandbySound();
+
+        ((VRC_Pickup)rideWatchTransform.GetComponent(typeof(VRC_Pickup))).Drop();
+    }
+
     public void DetachLSlot()
     {
         _lSlot.transform.DetachChildren();
@@ -218,6 +267,7 @@ public class ZikuDriver : UdonSharpBehaviour
         WriteLog("call", nameof(ResetState), 2);
 
         _isEquipped = false;
+        _isStandby = false;
         _rider = null;
         SetState(0);
         SetPositionOffset(Vector3.zero);
