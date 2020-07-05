@@ -60,3 +60,11 @@ crashlytics-build.properties
 
 # Visual Studio Code
 .vscode/
+
+# VRC SDK
+Assets/Udon.meta
+Assets/Udon/
+Assets/VRCSDK.meta
+Assets/VRCSDK/
+Assets/VRChat Examples.meta
+Assets/VRChat Examples/
